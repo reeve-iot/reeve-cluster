@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Unit</RootNamespace>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="JunitXml.TestLogger" />
+    <PackageReference Include="CsCheck" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Reeve.Cluster/Reeve.Cluster.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.AspNetCore/Reeve.Cluster.AspNetCore.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.EntityFrameworkCore/Reeve.Cluster.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.Redis/Reeve.Cluster.Redis.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.Abstractions/Reeve.Cluster.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

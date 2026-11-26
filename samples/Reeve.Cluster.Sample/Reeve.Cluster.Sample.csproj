@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Reeve.Cluster.Sample</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Reeve.Cluster.EntityFrameworkCore/Reeve.Cluster.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.AspNetCore/Reeve.Cluster.AspNetCore.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.Redis/Reeve.Cluster.Redis.csproj" />
+  </ItemGroup>
+
+</Project>

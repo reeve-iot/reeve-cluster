@@ -1,0 +1,53 @@
+#nullable enable
+Microsoft.Extensions.DependencyInjection.RedisPrimitivesServiceCollectionExtensions
+Microsoft.Extensions.DependencyInjection.RedisServiceCollectionExtensions
+Reeve.Cluster.Redis.ClusterRedisOptions
+Reeve.Cluster.Redis.ClusterRedisOptions.CheckEvictionPolicy.get -> bool
+Reeve.Cluster.Redis.ClusterRedisOptions.CheckEvictionPolicy.set -> void
+Reeve.Cluster.Redis.ClusterRedisOptions.ClusterRedisOptions() -> void
+Reeve.Cluster.Redis.ClusterRedisOptions.KeyPrefix.get -> string!
+Reeve.Cluster.Redis.ClusterRedisOptions.KeyPrefix.set -> void
+Reeve.Cluster.Redis.ClusterRedisRestore
+Reeve.Cluster.Redis.IRedisBudget
+Reeve.Cluster.Redis.IRedisBudget.ConsumeAsync(string! key, string! id, int limit, System.TimeSpan period, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.BudgetResult!>!
+Reeve.Cluster.Redis.IRedisClaims
+Reeve.Cluster.Redis.IRedisClaims.ClaimAsync(string! key, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ClaimResult!>!
+Reeve.Cluster.Redis.IRedisClaims.ExecuteAsync(string! key, System.Guid token, System.Action<StackExchange.Redis.ITransaction!>! effect, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.Redis.RedisEffectResult>!
+Reeve.Cluster.Redis.IRedisClaims.ReleaseAsync(string! key, System.Guid token, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.Redis.IRedisCounter
+Reeve.Cluster.Redis.IRedisCounter.IncrementAsync(string! key, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.CounterResult!>!
+Reeve.Cluster.Redis.IRedisSingleFlight
+Reeve.Cluster.Redis.IRedisSingleFlight.RunAsync(string! key, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<byte[]!>!>! compute, System.TimeSpan claimTtl, System.TimeSpan resultTtl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SingleFlightResult!>!
+Reeve.Cluster.Redis.IRedisSlots
+Reeve.Cluster.Redis.IRedisSlots.AcquireAsync(string! key, string! id, int limit, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SlotAcquireResult!>!
+Reeve.Cluster.Redis.IRedisSlots.ExecuteAsync(string! key, string! id, System.Guid token, System.Action<StackExchange.Redis.ITransaction!>! effect, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.Redis.RedisEffectResult>!
+Reeve.Cluster.Redis.IRedisSlots.ReleaseAsync(string! key, string! id, System.Guid? token, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.Redis.IRedisSlots.RenewAsync(string! key, string! id, System.Guid token, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SlotRenewResult>!
+Reeve.Cluster.Redis.OnRedisUnavailable
+Reeve.Cluster.Redis.OnRedisUnavailable.Grant = 1 -> Reeve.Cluster.Redis.OnRedisUnavailable
+Reeve.Cluster.Redis.OnRedisUnavailable.Refuse = 2 -> Reeve.Cluster.Redis.OnRedisUnavailable
+Reeve.Cluster.Redis.RedisEffectResult
+Reeve.Cluster.Redis.RedisEffectResult.Committed = 0 -> Reeve.Cluster.Redis.RedisEffectResult
+Reeve.Cluster.Redis.RedisEffectResult.NotServing = 2 -> Reeve.Cluster.Redis.RedisEffectResult
+Reeve.Cluster.Redis.RedisEffectResult.Refused = 1 -> Reeve.Cluster.Redis.RedisEffectResult
+Reeve.Cluster.Redis.RedisEffectResult.Unknown = 3 -> Reeve.Cluster.Redis.RedisEffectResult
+Reeve.Cluster.Redis.RedisPrimitiveKeys
+Reeve.Cluster.RedisFenceExtensions
+Reeve.Cluster.RedisFenceRefusedException
+Reeve.Cluster.RedisFenceRefusedException.RedisFenceRefusedException() -> void
+Reeve.Cluster.RedisFenceRefusedException.RedisFenceRefusedException(string! message) -> void
+Reeve.Cluster.RedisFenceRefusedException.RedisFenceRefusedException(string! message, System.Exception! innerException) -> void
+static Microsoft.Extensions.DependencyInjection.RedisPrimitivesServiceCollectionExtensions.AddReeveClusterRedisBudget(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Reeve.Cluster.Redis.OnRedisUnavailable onRedisUnavailable) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.RedisPrimitivesServiceCollectionExtensions.AddReeveClusterRedisClaims(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Reeve.Cluster.Redis.OnRedisUnavailable onRedisUnavailable) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.RedisPrimitivesServiceCollectionExtensions.AddReeveClusterRedisCounter(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.RedisPrimitivesServiceCollectionExtensions.AddReeveClusterRedisSingleFlight(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Reeve.Cluster.Redis.OnRedisUnavailable onRedisUnavailable) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.RedisPrimitivesServiceCollectionExtensions.AddReeveClusterRedisSlots(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Reeve.Cluster.Redis.OnRedisUnavailable onRedisUnavailable) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.RedisServiceCollectionExtensions.AddReeveClusterRedis(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Action<Reeve.Cluster.Redis.ClusterRedisOptions!>? configure = null) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Reeve.Cluster.Redis.ClusterRedisRestore.ClearOwnedKeysAsync(StackExchange.Redis.IConnectionMultiplexer! redis, string! keyPrefix = "reeve:", System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<long>!
+static Reeve.Cluster.Redis.RedisPrimitiveKeys.BudgetHashTag(string! prefix, string! key) -> string!
+static Reeve.Cluster.Redis.RedisPrimitiveKeys.ClaimHashTag(string! prefix, string! key) -> string!
+static Reeve.Cluster.Redis.RedisPrimitiveKeys.CounterHashTag(string! prefix, string! key) -> string!
+static Reeve.Cluster.Redis.RedisPrimitiveKeys.FlightHashTag(string! prefix, string! key) -> string!
+static Reeve.Cluster.Redis.RedisPrimitiveKeys.SlotHashTag(string! prefix, string! key) -> string!
+static Reeve.Cluster.RedisFenceExtensions.FenceRedisAsync(this Reeve.Cluster.OwnedContext! context, System.Action<StackExchange.Redis.ITransaction!>! write, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+static Reeve.Cluster.RedisFenceExtensions.RedisHashTag(this Reeve.Cluster.OwnedContext! context) -> string!

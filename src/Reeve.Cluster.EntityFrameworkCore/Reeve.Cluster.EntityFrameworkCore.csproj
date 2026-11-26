@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>Reeve.Cluster.EntityFrameworkCore</PackageId>
+    <Description>The capture interceptor and the fenced-write helper of Reeve.Cluster for Entity Framework Core.</Description>
+    <PackageTags>cluster;replicas;entityframeworkcore;postgresql</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Reeve.Cluster/Reeve.Cluster.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Reeve.Cluster.Tests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.IntegrationTests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.Harness" />
+  </ItemGroup>
+
+</Project>

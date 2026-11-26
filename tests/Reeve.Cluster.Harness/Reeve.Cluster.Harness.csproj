@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Testcontainers.PostgreSql" />
+    <PackageReference Include="Testcontainers.Redis" />
+    <PackageReference Include="Npgsql" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="StackExchange.Redis" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Reeve.Cluster.Harness.Tests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.IntegrationTests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.ArchitectureTests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Reeve.Cluster/Reeve.Cluster.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.Redis/Reeve.Cluster.Redis.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.EntityFrameworkCore/Reeve.Cluster.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="../../src/Reeve.Cluster.AspNetCore/Reeve.Cluster.AspNetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../samples/Reeve.Cluster.Sample/Reeve.Cluster.Sample.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>

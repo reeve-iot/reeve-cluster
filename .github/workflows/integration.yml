@@ -1,0 +1,100 @@
+name: Integration
+
+on:
+  schedule:
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+    inputs:
+      nightly:
+        description: Also run the long nightly tests
+        type: boolean
+        default: false
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 11.0.x
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: tests/linearizability-checker/go.mod
+      - name: Build the linearizability checker
+        working-directory: tests/linearizability-checker
+        run: |
+          CGO_ENABLED=0 go build -o "$RUNNER_TEMP/linearizability-checker" .
+          echo "REEVE_LINEARIZABILITY_CHECKER=$RUNNER_TEMP/linearizability-checker" >> "$GITHUB_ENV"
+      - run: dotnet build Reeve.Cluster.slnx -c Release
+      - run: dotnet test tests/Reeve.Cluster.IntegrationTests -c Release --no-build --filter "Category!=MixedVersion"
+      - run: dotnet test tests/Reeve.Cluster.Harness.Tests -c Release --no-build --filter "Category!=MixedVersion"
+
+  mixed-version:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 11.0.x
+      - name: Find the releases to run beside
+        id: refs
+        run: |
+          if [[ $GITHUB_REF == refs/tags/v* ]]; then
+            refs=$(tools/previous-release.sh "$GITHUB_REF_NAME")
+          else
+            refs=$(tools/previous-release.sh --head)
+          fi
+          echo "refs=$(echo $refs)" >> "$GITHUB_OUTPUT"
+          [[ -n $refs ]] || echo "No earlier release: nothing to run beside."
+      - if: steps.refs.outputs.refs != ''
+        run: dotnet build Reeve.Cluster.slnx -c Release
+      - if: steps.refs.outputs.refs != ''
+        env:
+          REFS: ${{ steps.refs.outputs.refs }}
+        run: |
+          rc=0
+          for old in $REFS; do
+            tools/previous-release.sh --require-below "$old" HEAD
+            export REEVE_MIXED_OLD_REF=$old
+            if [ -z "$(git diff --name-only --diff-filter=AD "$old" HEAD -- ':(glob)src/Reeve.Cluster/Migrations/[0-9]*.cs' ':(exclude,glob)**/*.Designer.cs')" ]; then
+              export REEVE_MIXED_SCHEMA_DELTA=none
+            else
+              unset REEVE_MIXED_SCHEMA_DELTA
+            fi
+            f="$RUNNER_TEMP/mixed-version-$old.xml"
+            { dotnet test tests/Reeve.Cluster.Harness.Tests -c Release --no-build --filter "Category=MixedVersion" --logger "junit;LogFilePath=$f" \
+              && tools/check-mixed-junit.sh "$f"; } || { echo "mixed fleet against $old failed"; rc=1; }
+          done
+          exit $rc
+
+  nightly:
+    if: github.event_name == 'schedule' || inputs.nightly
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      REEVE_NIGHTLY: 'true'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 11.0.x
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: tests/linearizability-checker/go.mod
+      - name: Build the linearizability checker
+        working-directory: tests/linearizability-checker
+        run: |
+          CGO_ENABLED=0 go build -o "$RUNNER_TEMP/linearizability-checker" .
+          echo "REEVE_LINEARIZABILITY_CHECKER=$RUNNER_TEMP/linearizability-checker" >> "$GITHUB_ENV"
+      - run: dotnet build Reeve.Cluster.slnx -c Release
+      - run: dotnet test tests/Reeve.Cluster.Harness.Tests -c Release --no-build --filter "Category=Nightly"
+      - run: dotnet test tests/Reeve.Cluster.IntegrationTests -c Release --no-build --filter "Category=Nightly"

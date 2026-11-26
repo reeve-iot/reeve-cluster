@@ -1,0 +1,54 @@
+#nullable enable
+Microsoft.AspNetCore.Builder.ReeveClusterEndpointExtensions
+Microsoft.AspNetCore.Builder.ReeveClusterSkipEndpoints
+Microsoft.AspNetCore.Builder.ReeveClusterStatusEndpoint
+Microsoft.Extensions.DependencyInjection.ReeveClusterAspNetCoreServiceCollectionExtensions
+Reeve.Cluster.AspNetCore.AllowWhenFencedAttribute
+Reeve.Cluster.AspNetCore.AllowWhenFencedAttribute.AllowWhenFencedAttribute() -> void
+Reeve.Cluster.AspNetCore.AspNetCoreFenceSink
+Reeve.Cluster.AspNetCore.AspNetCoreFenceSink.AbortConnectionsAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.AspNetCore.AspNetCoreFenceSink.AspNetCoreFenceSink(Reeve.Cluster.AspNetCore.ClusterConnections! connections, Microsoft.Extensions.Logging.ILogger<Reeve.Cluster.AspNetCore.AspNetCoreFenceSink!>! logger) -> void
+Reeve.Cluster.AspNetCore.ClusterConnections
+Reeve.Cluster.AspNetCore.ClusterConnections.AbortAll() -> int
+Reeve.Cluster.AspNetCore.ClusterConnections.ClusterConnections() -> void
+Reeve.Cluster.AspNetCore.ClusterConnections.Count.get -> int
+Reeve.Cluster.AspNetCore.ClusterConnections.Track(Microsoft.AspNetCore.Http.HttpContext! context) -> System.IDisposable!
+Reeve.Cluster.AspNetCore.ClusterHttpError
+Reeve.Cluster.AspNetCore.ClusterHttpError.<Clone>$() -> Reeve.Cluster.AspNetCore.ClusterHttpError!
+Reeve.Cluster.AspNetCore.ClusterHttpError.ClusterHttpError(int StatusCode, string! ErrorCode, string! Detail) -> void
+Reeve.Cluster.AspNetCore.ClusterHttpError.Deconstruct(out int StatusCode, out string! ErrorCode, out string! Detail) -> void
+Reeve.Cluster.AspNetCore.ClusterHttpError.Detail.get -> string!
+Reeve.Cluster.AspNetCore.ClusterHttpError.Detail.init -> void
+Reeve.Cluster.AspNetCore.ClusterHttpError.Equals(Reeve.Cluster.AspNetCore.ClusterHttpError? other) -> bool
+Reeve.Cluster.AspNetCore.ClusterHttpError.ErrorCode.get -> string!
+Reeve.Cluster.AspNetCore.ClusterHttpError.ErrorCode.init -> void
+Reeve.Cluster.AspNetCore.ClusterHttpError.Extensions.get -> System.Collections.Generic.IReadOnlyDictionary<string!, object?>!
+Reeve.Cluster.AspNetCore.ClusterHttpError.Extensions.init -> void
+Reeve.Cluster.AspNetCore.ClusterHttpError.StatusCode.get -> int
+Reeve.Cluster.AspNetCore.ClusterHttpError.StatusCode.init -> void
+Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions
+Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions.HeaderPrefix.get -> string!
+Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions.HeaderPrefix.set -> void
+Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions.ReeveClusterHttpOptions() -> void
+Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions.WriteError.get -> System.Func<Microsoft.AspNetCore.Http.HttpContext!, Reeve.Cluster.AspNetCore.ClusterHttpError!, System.Threading.Tasks.Task!>?
+Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions.WriteError.set -> void
+Reeve.Cluster.AspNetCore.SkipReadIndexAttribute
+Reeve.Cluster.AspNetCore.SkipReadIndexAttribute.SkipReadIndexAttribute() -> void
+const Microsoft.AspNetCore.Builder.ReeveClusterSkipEndpoints.CoversAcknowledged = "skip_covers_acknowledged" -> string!
+const Microsoft.AspNetCore.Builder.ReeveClusterSkipEndpoints.Invalid = "skip_request_invalid" -> string!
+const Microsoft.AspNetCore.Builder.ReeveClusterSkipEndpoints.NotFound = "skip_not_found" -> string!
+const Microsoft.AspNetCore.Builder.ReeveClusterStatusEndpoint.Unavailable = "status_unavailable" -> string!
+override Reeve.Cluster.AspNetCore.ClusterHttpError.Equals(object? obj) -> bool
+override Reeve.Cluster.AspNetCore.ClusterHttpError.GetHashCode() -> int
+override Reeve.Cluster.AspNetCore.ClusterHttpError.ToString() -> string!
+static Microsoft.AspNetCore.Builder.ReeveClusterEndpointExtensions.AcknowledgeWrites<TBuilder>(this TBuilder builder) -> TBuilder
+static Microsoft.AspNetCore.Builder.ReeveClusterEndpointExtensions.AllowWhenFenced<TBuilder>(this TBuilder builder) -> TBuilder
+static Microsoft.AspNetCore.Builder.ReeveClusterEndpointExtensions.SkipReadIndex<TBuilder>(this TBuilder builder) -> TBuilder
+static Microsoft.AspNetCore.Builder.ReeveClusterEndpointExtensions.UseReeveCluster(this Microsoft.AspNetCore.Builder.IApplicationBuilder! app) -> Microsoft.AspNetCore.Builder.IApplicationBuilder!
+static Microsoft.AspNetCore.Builder.ReeveClusterSkipEndpoints.MapReeveClusterSkips(this Microsoft.AspNetCore.Routing.IEndpointRouteBuilder! endpoints, string! pattern = "/reeve/skips") -> Microsoft.AspNetCore.Routing.RouteGroupBuilder!
+static Microsoft.AspNetCore.Builder.ReeveClusterStatusEndpoint.MapReeveClusterStatus(this Microsoft.AspNetCore.Routing.IEndpointRouteBuilder! endpoints, string! pattern = "/reeve/status") -> Microsoft.AspNetCore.Builder.RouteHandlerBuilder!
+static Microsoft.Extensions.DependencyInjection.ReeveClusterAspNetCoreServiceCollectionExtensions.AddReeveClusterAspNetCore(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Action<Reeve.Cluster.AspNetCore.ReeveClusterHttpOptions!>? configure = null) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ReeveClusterAspNetCoreServiceCollectionExtensions.AddReeveClusterReadiness(this Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder! builder, string! name = "reeve-cluster", System.Collections.Generic.IEnumerable<string!>? tags = null) -> Microsoft.Extensions.DependencyInjection.IHealthChecksBuilder!
+static Reeve.Cluster.AspNetCore.ClusterHttpError.operator !=(Reeve.Cluster.AspNetCore.ClusterHttpError? left, Reeve.Cluster.AspNetCore.ClusterHttpError? right) -> bool
+static Reeve.Cluster.AspNetCore.ClusterHttpError.operator ==(Reeve.Cluster.AspNetCore.ClusterHttpError? left, Reeve.Cluster.AspNetCore.ClusterHttpError? right) -> bool
+const Microsoft.AspNetCore.Builder.ReeveClusterSkipEndpoints.Unprotected = "skip_endpoint_unprotected" -> string!

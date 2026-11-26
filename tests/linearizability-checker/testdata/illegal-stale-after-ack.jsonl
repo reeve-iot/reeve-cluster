@@ -1,0 +1,3 @@
+{"format":"reeve-history/1","types":["A","B","C"]}
+{"id":1,"client":0,"replica":0,"kind":"write","call":10,"ret":20,"status":"ok","writes":{"A":1}}
+{"id":2,"client":1,"replica":1,"kind":"read","call":30,"ret":40,"status":"ok","reads":{"A":0,"B":0,"C":0}}

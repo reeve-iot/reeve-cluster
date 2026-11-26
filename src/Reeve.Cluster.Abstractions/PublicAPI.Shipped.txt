@@ -1,0 +1,1077 @@
+#nullable enable
+Reeve.Cluster.AckOutcome
+Reeve.Cluster.AckOutcome.AckOutcome(Reeve.Cluster.AckOutcome! original) -> void
+Reeve.Cluster.AckOutcome.Acknowledged
+Reeve.Cluster.AckOutcome.Acknowledged.Acknowledged(System.Collections.Generic.IReadOnlyList<string!>! Skipped) -> void
+Reeve.Cluster.AckOutcome.Acknowledged.Deconstruct(out System.Collections.Generic.IReadOnlyList<string!>! Skipped) -> void
+Reeve.Cluster.AckOutcome.Acknowledged.Equals(Reeve.Cluster.AckOutcome.Acknowledged? other) -> bool
+Reeve.Cluster.AckOutcome.Acknowledged.Skipped.get -> System.Collections.Generic.IReadOnlyList<string!>!
+Reeve.Cluster.AckOutcome.Acknowledged.Skipped.init -> void
+Reeve.Cluster.AckOutcome.NotAwaited
+Reeve.Cluster.AckOutcome.NotAwaited.Deconstruct(out Reeve.Cluster.NotAwaitedReason Reason) -> void
+Reeve.Cluster.AckOutcome.NotAwaited.Equals(Reeve.Cluster.AckOutcome.NotAwaited? other) -> bool
+Reeve.Cluster.AckOutcome.NotAwaited.NotAwaited(Reeve.Cluster.NotAwaitedReason Reason) -> void
+Reeve.Cluster.AckOutcome.NotAwaited.Reason.get -> Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.AckOutcome.NotAwaited.Reason.init -> void
+Reeve.Cluster.AckOutcome.Unconfirmed
+Reeve.Cluster.AckOutcome.Unconfirmed.Deconstruct(out Reeve.Cluster.UnconfirmedReason Reason) -> void
+Reeve.Cluster.AckOutcome.Unconfirmed.Equals(Reeve.Cluster.AckOutcome.Unconfirmed? other) -> bool
+Reeve.Cluster.AckOutcome.Unconfirmed.Reason.get -> Reeve.Cluster.UnconfirmedReason
+Reeve.Cluster.AckOutcome.Unconfirmed.Reason.init -> void
+Reeve.Cluster.AckOutcome.Unconfirmed.Unconfirmed(Reeve.Cluster.UnconfirmedReason Reason) -> void
+Reeve.Cluster.AdoptionPolicy
+Reeve.Cluster.AdoptionPolicy.AnyEligible = 1 -> Reeve.Cluster.AdoptionPolicy
+Reeve.Cluster.AdoptionPolicy.None = 2 -> Reeve.Cluster.AdoptionPolicy
+Reeve.Cluster.AdoptionPolicy.Placer = 0 -> Reeve.Cluster.AdoptionPolicy
+Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskOutcome.Answered = 0 -> Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskOutcome.NoOwner = 4 -> Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskOutcome.NotTaken = 1 -> Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskOutcome.OwnerLost = 3 -> Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskOutcome.TakenUnanswered = 2 -> Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskRequest
+Reeve.Cluster.AskRequest.<Clone>$() -> Reeve.Cluster.AskRequest!
+Reeve.Cluster.AskRequest.AskRequest(string? Kind, string? Key, System.ReadOnlyMemory<byte> Payload) -> void
+Reeve.Cluster.AskRequest.Deconstruct(out string? Kind, out string? Key, out System.ReadOnlyMemory<byte> Payload) -> void
+Reeve.Cluster.AskRequest.Equals(Reeve.Cluster.AskRequest? other) -> bool
+Reeve.Cluster.AskRequest.IsMemberRequest.get -> bool
+Reeve.Cluster.AskRequest.Key.get -> string?
+Reeve.Cluster.AskRequest.Key.init -> void
+Reeve.Cluster.AskRequest.Kind.get -> string?
+Reeve.Cluster.AskRequest.Kind.init -> void
+Reeve.Cluster.AskRequest.Owner.get -> Reeve.Cluster.OwnedContext?
+Reeve.Cluster.AskRequest.Owner.init -> void
+Reeve.Cluster.AskRequest.Payload.get -> System.ReadOnlyMemory<byte>
+Reeve.Cluster.AskRequest.Payload.init -> void
+Reeve.Cluster.AskResult
+Reeve.Cluster.AskResult.<Clone>$() -> Reeve.Cluster.AskResult!
+Reeve.Cluster.AskResult.Equals(Reeve.Cluster.AskResult? other) -> bool
+Reeve.Cluster.AskResult.Error.get -> string?
+Reeve.Cluster.AskResult.Outcome.get -> Reeve.Cluster.AskOutcome
+Reeve.Cluster.AskResult.Response.get -> System.ReadOnlyMemory<byte>
+Reeve.Cluster.AskResult.SafeToRetry.get -> bool
+Reeve.Cluster.BudgetResult
+Reeve.Cluster.BudgetResult.AlreadyCounted
+Reeve.Cluster.BudgetResult.AlreadyCounted.AlreadyCounted() -> void
+Reeve.Cluster.BudgetResult.AlreadyCounted.Equals(Reeve.Cluster.BudgetResult.AlreadyCounted? other) -> bool
+Reeve.Cluster.BudgetResult.BudgetResult(Reeve.Cluster.BudgetResult! original) -> void
+Reeve.Cluster.BudgetResult.Exhausted
+Reeve.Cluster.BudgetResult.Exhausted.Equals(Reeve.Cluster.BudgetResult.Exhausted? other) -> bool
+Reeve.Cluster.BudgetResult.Exhausted.Exhausted() -> void
+Reeve.Cluster.BudgetResult.Granted
+Reeve.Cluster.BudgetResult.Granted.Deconstruct(out int Used) -> void
+Reeve.Cluster.BudgetResult.Granted.Equals(Reeve.Cluster.BudgetResult.Granted? other) -> bool
+Reeve.Cluster.BudgetResult.Granted.Granted(int Used) -> void
+Reeve.Cluster.BudgetResult.Granted.Used.get -> int
+Reeve.Cluster.BudgetResult.Granted.Used.init -> void
+Reeve.Cluster.BudgetResult.IsAllowed.get -> bool
+Reeve.Cluster.BudgetResult.NotServing
+Reeve.Cluster.BudgetResult.NotServing.Equals(Reeve.Cluster.BudgetResult.NotServing? other) -> bool
+Reeve.Cluster.BudgetResult.NotServing.NotServing() -> void
+Reeve.Cluster.BudgetResult.Unknown
+Reeve.Cluster.BudgetResult.Unknown.Equals(Reeve.Cluster.BudgetResult.Unknown? other) -> bool
+Reeve.Cluster.BudgetResult.Unknown.Unknown() -> void
+Reeve.Cluster.ChangeEntry
+Reeve.Cluster.ChangeEntry.<Clone>$() -> Reeve.Cluster.ChangeEntry!
+Reeve.Cluster.ChangeEntry.AggregateKey.get -> string?
+Reeve.Cluster.ChangeEntry.AggregateKey.init -> void
+Reeve.Cluster.ChangeEntry.AggregateType.get -> string!
+Reeve.Cluster.ChangeEntry.AggregateType.init -> void
+Reeve.Cluster.ChangeEntry.ChangeEntry(string! AggregateType, string? AggregateKey) -> void
+Reeve.Cluster.ChangeEntry.ChangeEntry(string! aggregateType) -> void
+Reeve.Cluster.ChangeEntry.Deconstruct(out string! AggregateType, out string? AggregateKey) -> void
+Reeve.Cluster.ChangeEntry.Equals(Reeve.Cluster.ChangeEntry? other) -> bool
+Reeve.Cluster.ClaimLostException
+Reeve.Cluster.ClaimLostException.ClaimLostException() -> void
+Reeve.Cluster.ClaimLostException.ClaimLostException(string! message) -> void
+Reeve.Cluster.ClaimLostException.ClaimLostException(string! message, System.Exception! innerException) -> void
+Reeve.Cluster.ClaimResult
+Reeve.Cluster.ClaimResult.ClaimResult(Reeve.Cluster.ClaimResult! original) -> void
+Reeve.Cluster.ClaimResult.IsWon.get -> bool
+Reeve.Cluster.ClaimResult.Lost
+Reeve.Cluster.ClaimResult.Lost.Deconstruct(out string! Holder) -> void
+Reeve.Cluster.ClaimResult.Lost.Equals(Reeve.Cluster.ClaimResult.Lost? other) -> bool
+Reeve.Cluster.ClaimResult.Lost.Holder.get -> string!
+Reeve.Cluster.ClaimResult.Lost.Holder.init -> void
+Reeve.Cluster.ClaimResult.Lost.Lost(string! Holder) -> void
+Reeve.Cluster.ClaimResult.NotServing
+Reeve.Cluster.ClaimResult.NotServing.Equals(Reeve.Cluster.ClaimResult.NotServing? other) -> bool
+Reeve.Cluster.ClaimResult.NotServing.NotServing() -> void
+Reeve.Cluster.ClaimResult.TryGetToken(out System.Guid token) -> bool
+Reeve.Cluster.ClaimResult.Unknown
+Reeve.Cluster.ClaimResult.Unknown.Equals(Reeve.Cluster.ClaimResult.Unknown? other) -> bool
+Reeve.Cluster.ClaimResult.Unknown.Unknown() -> void
+Reeve.Cluster.ClaimResult.Won
+Reeve.Cluster.ClaimResult.Won.Deconstruct(out System.Guid Token) -> void
+Reeve.Cluster.ClaimResult.Won.Equals(Reeve.Cluster.ClaimResult.Won? other) -> bool
+Reeve.Cluster.ClaimResult.Won.Token.get -> System.Guid
+Reeve.Cluster.ClaimResult.Won.Token.init -> void
+Reeve.Cluster.ClaimResult.Won.Won(System.Guid Token) -> void
+Reeve.Cluster.ClusterCapabilities
+Reeve.Cluster.ClusterConfigurationException
+Reeve.Cluster.ClusterConfigurationException.ClusterConfigurationException(Reeve.Cluster.ClusterConfigurationReason reason, string! message) -> void
+Reeve.Cluster.ClusterConfigurationException.Reason.get -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.NotPrimary = 2 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.PostgreSqlTooOld = 1 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.ReconcilerDependencyNotEarlier = 6 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.ReconcilerDependencyUnknown = 5 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.RedisEvictionPolicy = 4 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.RedisPolicyRequired = 7 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.RedisTooOld = 3 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.StatusSectionNameDuplicate = 8 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.StatusSectionNameInvalid = 10 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.StatusSectionNameReserved = 9 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.TransactionTimeoutNotZero = 0 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterFenceRecord
+Reeve.Cluster.ClusterFenceRecord.<Clone>$() -> Reeve.Cluster.ClusterFenceRecord!
+Reeve.Cluster.ClusterFenceRecord.ClusterFenceRecord() -> void
+Reeve.Cluster.ClusterFenceRecord.Epoch.get -> long
+Reeve.Cluster.ClusterFenceRecord.Epoch.init -> void
+Reeve.Cluster.ClusterFenceRecord.Equals(Reeve.Cluster.ClusterFenceRecord? other) -> bool
+Reeve.Cluster.ClusterFenceRecord.FencedAt.get -> System.DateTimeOffset
+Reeve.Cluster.ClusterFenceRecord.FencedAt.init -> void
+Reeve.Cluster.ClusterFenceRecord.Span.get -> System.TimeSpan
+Reeve.Cluster.ClusterFenceRecord.Span.init -> void
+Reeve.Cluster.ClusterFenceRecord.Trigger.get -> string!
+Reeve.Cluster.ClusterFenceRecord.Trigger.init -> void
+Reeve.Cluster.ClusterMemberStatus
+Reeve.Cluster.ClusterMemberStatus.<Clone>$() -> Reeve.Cluster.ClusterMemberStatus!
+Reeve.Cluster.ClusterMemberStatus.AppliedSeq.get -> long
+Reeve.Cluster.ClusterMemberStatus.AppliedSeq.init -> void
+Reeve.Cluster.ClusterMemberStatus.ClusterMemberStatus() -> void
+Reeve.Cluster.ClusterMemberStatus.Epoch.get -> long
+Reeve.Cluster.ClusterMemberStatus.Epoch.init -> void
+Reeve.Cluster.ClusterMemberStatus.Equals(Reeve.Cluster.ClusterMemberStatus? other) -> bool
+Reeve.Cluster.ClusterMemberStatus.Fences.get -> System.Collections.Generic.IReadOnlyList<Reeve.Cluster.ClusterFenceRecord!>!
+Reeve.Cluster.ClusterMemberStatus.Fences.init -> void
+Reeve.Cluster.ClusterMemberStatus.LeaseExpiresAt.get -> System.DateTimeOffset
+Reeve.Cluster.ClusterMemberStatus.LeaseExpiresAt.init -> void
+Reeve.Cluster.ClusterMemberStatus.LeaseValid.get -> bool
+Reeve.Cluster.ClusterMemberStatus.LeaseValid.init -> void
+Reeve.Cluster.ClusterMemberStatus.Protocol.get -> int
+Reeve.Cluster.ClusterMemberStatus.Protocol.init -> void
+Reeve.Cluster.ClusterMemberStatus.ReplicaId.get -> string!
+Reeve.Cluster.ClusterMemberStatus.ReplicaId.init -> void
+Reeve.Cluster.ClusterMemberStatus.Sections.get -> System.Collections.Generic.IReadOnlyList<Reeve.Cluster.ClusterStatusSection!>!
+Reeve.Cluster.ClusterMemberStatus.Sections.init -> void
+Reeve.Cluster.ClusterMemberStatus.ServingSince.get -> System.DateTimeOffset?
+Reeve.Cluster.ClusterMemberStatus.ServingSince.init -> void
+Reeve.Cluster.ClusterMemberStatus.State.get -> string!
+Reeve.Cluster.ClusterMemberStatus.State.init -> void
+Reeve.Cluster.ClusterMemberStatus.Version.get -> string!
+Reeve.Cluster.ClusterMemberStatus.Version.init -> void
+Reeve.Cluster.ClusterOptions
+Reeve.Cluster.ClusterOptions.AckPollInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.AckPollInterval.set -> void
+Reeve.Cluster.ClusterOptions.AckTimeout.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.AckTimeout.set -> void
+Reeve.Cluster.ClusterOptions.AckTimeoutRelationBound.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.ActionTimeBudget.get -> System.TimeSpan?
+Reeve.Cluster.ClusterOptions.ActionTimeBudget.set -> void
+Reeve.Cluster.ClusterOptions.ApplyPollInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.ApplyPollInterval.set -> void
+Reeve.Cluster.ClusterOptions.ApplyStallLimit.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.ApplyStallLimit.set -> void
+Reeve.Cluster.ClusterOptions.CheckSynchronousReplication.get -> bool
+Reeve.Cluster.ClusterOptions.CheckSynchronousReplication.set -> void
+Reeve.Cluster.ClusterOptions.ClusterOptions() -> void
+Reeve.Cluster.ClusterOptions.CommandPendingTtl.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.CommandPendingTtl.set -> void
+Reeve.Cluster.ClusterOptions.CommandRetention.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.CommandRetention.set -> void
+Reeve.Cluster.ClusterOptions.ConnectionString.get -> string?
+Reeve.Cluster.ClusterOptions.ConnectionString.set -> void
+Reeve.Cluster.ClusterOptions.CounterRetention.get -> System.TimeSpan?
+Reeve.Cluster.ClusterOptions.CounterRetention.set -> void
+Reeve.Cluster.ClusterOptions.FencedTransactionTimeout.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.FencedTransactionTimeout.set -> void
+Reeve.Cluster.ClusterOptions.HintLimit.get -> int
+Reeve.Cluster.ClusterOptions.HintLimit.set -> void
+Reeve.Cluster.ClusterOptions.LeaseTtl.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.LeaseTtl.set -> void
+Reeve.Cluster.ClusterOptions.OnceRetention.get -> System.TimeSpan?
+Reeve.Cluster.ClusterOptions.OnceRetention.set -> void
+Reeve.Cluster.ClusterOptions.OwnedRowRetention.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.OwnedRowRetention.set -> void
+Reeve.Cluster.ClusterOptions.PlacementInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.PlacementInterval.set -> void
+Reeve.Cluster.ClusterOptions.ProxyReadTimeout.get -> System.TimeSpan?
+Reeve.Cluster.ClusterOptions.ProxyReadTimeout.set -> void
+Reeve.Cluster.ClusterOptions.ReadIndexTimeout.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.ReadIndexTimeout.set -> void
+Reeve.Cluster.ClusterOptions.ReconcileTimeout.get -> System.TimeSpan?
+Reeve.Cluster.ClusterOptions.ReconcileTimeout.set -> void
+Reeve.Cluster.ClusterOptions.RejoinBackoff.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.RejoinBackoff.set -> void
+Reeve.Cluster.ClusterOptions.ReleaseGrace.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.ReleaseGrace.set -> void
+Reeve.Cluster.ClusterOptions.ReleaseGraceRelationValue.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.RenewInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.RenewInterval.set -> void
+Reeve.Cluster.ClusterOptions.RenewIntervalLimit.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.RenewTimeout.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.RenewTimeout.set -> void
+Reeve.Cluster.ClusterOptions.ReplicaId.get -> string?
+Reeve.Cluster.ClusterOptions.ReplicaId.set -> void
+Reeve.Cluster.ClusterOptions.ReplicationCheckInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.ReplicationCheckInterval.set -> void
+Reeve.Cluster.ClusterOptions.RetentionInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.RetentionInterval.set -> void
+Reeve.Cluster.ClusterOptions.SafetyMargin.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.SafetyMargin.set -> void
+Reeve.Cluster.ClusterOptions.StabilisationWindow.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.StabilisationWindow.set -> void
+Reeve.Cluster.ClusterOptions.StatusReportInterval.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.StatusReportInterval.set -> void
+Reeve.Cluster.ClusterOptions.StopBudget.get -> System.TimeSpan
+Reeve.Cluster.ClusterOptions.StopBudget.set -> void
+Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.ClusterScopeKind.Applier = 4 -> Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.ClusterScopeKind.Background = 3 -> Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.ClusterScopeKind.ClientRequest = 0 -> Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.ClusterScopeKind.ExemptRequest = 1 -> Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.ClusterScopeKind.UnitOfWork = 2 -> Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.ClusterStatusRead
+Reeve.Cluster.ClusterStatusRead.<Clone>$() -> Reeve.Cluster.ClusterStatusRead!
+Reeve.Cluster.ClusterStatusRead.ClusterStatusRead() -> void
+Reeve.Cluster.ClusterStatusRead.Equals(Reeve.Cluster.ClusterStatusRead? other) -> bool
+Reeve.Cluster.ClusterStatusRead.Members.get -> System.Collections.Generic.IReadOnlyList<Reeve.Cluster.ClusterMemberStatus!>!
+Reeve.Cluster.ClusterStatusRead.Members.init -> void
+Reeve.Cluster.ClusterStatusRead.ReadAt.get -> System.DateTimeOffset
+Reeve.Cluster.ClusterStatusRead.ReadAt.init -> void
+Reeve.Cluster.ClusterStatusSection
+Reeve.Cluster.ClusterStatusSection.<Clone>$() -> Reeve.Cluster.ClusterStatusSection!
+Reeve.Cluster.ClusterStatusSection.Age.get -> System.TimeSpan
+Reeve.Cluster.ClusterStatusSection.Age.init -> void
+Reeve.Cluster.ClusterStatusSection.ClusterStatusSection() -> void
+Reeve.Cluster.ClusterStatusSection.Equals(Reeve.Cluster.ClusterStatusSection? other) -> bool
+Reeve.Cluster.ClusterStatusSection.Name.get -> string!
+Reeve.Cluster.ClusterStatusSection.Name.init -> void
+Reeve.Cluster.ClusterStatusSection.Values.get -> System.Text.Json.JsonElement
+Reeve.Cluster.ClusterStatusSection.Values.init -> void
+Reeve.Cluster.CommitOutcomeUnknownException
+Reeve.Cluster.CommitOutcomeUnknownException.CommitOutcomeUnknownException() -> void
+Reeve.Cluster.CommitOutcomeUnknownException.CommitOutcomeUnknownException(string! message) -> void
+Reeve.Cluster.CommitOutcomeUnknownException.CommitOutcomeUnknownException(string! message, System.Exception! innerException) -> void
+Reeve.Cluster.CounterResult
+Reeve.Cluster.CounterResult.CounterResult(Reeve.Cluster.CounterResult! original) -> void
+Reeve.Cluster.CounterResult.Incremented
+Reeve.Cluster.CounterResult.Incremented.Deconstruct(out long Value) -> void
+Reeve.Cluster.CounterResult.Incremented.Equals(Reeve.Cluster.CounterResult.Incremented? other) -> bool
+Reeve.Cluster.CounterResult.Incremented.Incremented(long Value) -> void
+Reeve.Cluster.CounterResult.Incremented.Value.get -> long
+Reeve.Cluster.CounterResult.Incremented.Value.init -> void
+Reeve.Cluster.CounterResult.Unknown
+Reeve.Cluster.CounterResult.Unknown.Equals(Reeve.Cluster.CounterResult.Unknown? other) -> bool
+Reeve.Cluster.CounterResult.Unknown.Unknown() -> void
+Reeve.Cluster.CreateOutcome
+Reeve.Cluster.CreateOutcome.AlreadyOwned = 1 -> Reeve.Cluster.CreateOutcome
+Reeve.Cluster.CreateOutcome.Created = 0 -> Reeve.Cluster.CreateOutcome
+Reeve.Cluster.CreateOutcome.NotServing = 2 -> Reeve.Cluster.CreateOutcome
+Reeve.Cluster.CreateOutcome.Stopping = 3 -> Reeve.Cluster.CreateOutcome
+Reeve.Cluster.DurableCommand
+Reeve.Cluster.DurableCommand.<Clone>$() -> Reeve.Cluster.DurableCommand!
+Reeve.Cluster.DurableCommand.Deconstruct(out long Id, out string! Kind, out string! Key, out string! IdempotencyKey, out System.ReadOnlyMemory<byte> Payload) -> void
+Reeve.Cluster.DurableCommand.DurableCommand(long Id, string! Kind, string! Key, string! IdempotencyKey, System.ReadOnlyMemory<byte> Payload) -> void
+Reeve.Cluster.DurableCommand.Equals(Reeve.Cluster.DurableCommand? other) -> bool
+Reeve.Cluster.DurableCommand.Id.get -> long
+Reeve.Cluster.DurableCommand.Id.init -> void
+Reeve.Cluster.DurableCommand.IdempotencyKey.get -> string!
+Reeve.Cluster.DurableCommand.IdempotencyKey.init -> void
+Reeve.Cluster.DurableCommand.Key.get -> string!
+Reeve.Cluster.DurableCommand.Key.init -> void
+Reeve.Cluster.DurableCommand.Kind.get -> string!
+Reeve.Cluster.DurableCommand.Kind.init -> void
+Reeve.Cluster.DurableCommand.Owner.get -> Reeve.Cluster.OwnedContext!
+Reeve.Cluster.DurableCommand.Owner.init -> void
+Reeve.Cluster.DurableCommand.Payload.get -> System.ReadOnlyMemory<byte>
+Reeve.Cluster.DurableCommand.Payload.init -> void
+Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandOutcome.Completed = 0 -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandOutcome.Failed = 1 -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandOutcome.InDoubt = 2 -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandOutcome.NoOwner = 3 -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandOutcome.NotFound = 5 -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandOutcome.Unfinished = 4 -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandResult
+Reeve.Cluster.DurableCommandResult.<Clone>$() -> Reeve.Cluster.DurableCommandResult!
+Reeve.Cluster.DurableCommandResult.CommandId.get -> long
+Reeve.Cluster.DurableCommandResult.CommandId.init -> void
+Reeve.Cluster.DurableCommandResult.Deconstruct(out Reeve.Cluster.DurableCommandOutcome Outcome, out long CommandId, out Reeve.Cluster.DurableCommandState? State, out System.ReadOnlyMemory<byte> Result, out string? Error) -> void
+Reeve.Cluster.DurableCommandResult.DurableCommandResult(Reeve.Cluster.DurableCommandOutcome Outcome, long CommandId, Reeve.Cluster.DurableCommandState? State, System.ReadOnlyMemory<byte> Result, string? Error) -> void
+Reeve.Cluster.DurableCommandResult.Equals(Reeve.Cluster.DurableCommandResult? other) -> bool
+Reeve.Cluster.DurableCommandResult.Error.get -> string?
+Reeve.Cluster.DurableCommandResult.Error.init -> void
+Reeve.Cluster.DurableCommandResult.Outcome.get -> Reeve.Cluster.DurableCommandOutcome
+Reeve.Cluster.DurableCommandResult.Outcome.init -> void
+Reeve.Cluster.DurableCommandResult.Result.get -> System.ReadOnlyMemory<byte>
+Reeve.Cluster.DurableCommandResult.Result.init -> void
+Reeve.Cluster.DurableCommandResult.SafeToRetry.get -> bool
+Reeve.Cluster.DurableCommandResult.State.get -> Reeve.Cluster.DurableCommandState?
+Reeve.Cluster.DurableCommandResult.State.init -> void
+Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableCommandState.Done = 2 -> Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableCommandState.Expired = 4 -> Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableCommandState.InDoubt = 3 -> Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableCommandState.Pending = 0 -> Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableCommandState.Taken = 1 -> Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableSendOutcome
+Reeve.Cluster.DurableSendOutcome.Existing = 1 -> Reeve.Cluster.DurableSendOutcome
+Reeve.Cluster.DurableSendOutcome.IdempotencyConflict = 3 -> Reeve.Cluster.DurableSendOutcome
+Reeve.Cluster.DurableSendOutcome.Resent = 2 -> Reeve.Cluster.DurableSendOutcome
+Reeve.Cluster.DurableSendOutcome.Sent = 0 -> Reeve.Cluster.DurableSendOutcome
+Reeve.Cluster.DurableSendResult
+Reeve.Cluster.DurableSendResult.<Clone>$() -> Reeve.Cluster.DurableSendResult!
+Reeve.Cluster.DurableSendResult.CommandId.get -> long
+Reeve.Cluster.DurableSendResult.CommandId.init -> void
+Reeve.Cluster.DurableSendResult.Deconstruct(out Reeve.Cluster.DurableSendOutcome Outcome, out long CommandId, out Reeve.Cluster.DurableCommandState State) -> void
+Reeve.Cluster.DurableSendResult.DurableSendResult(Reeve.Cluster.DurableSendOutcome Outcome, long CommandId, Reeve.Cluster.DurableCommandState State) -> void
+Reeve.Cluster.DurableSendResult.Equals(Reeve.Cluster.DurableSendResult? other) -> bool
+Reeve.Cluster.DurableSendResult.Outcome.get -> Reeve.Cluster.DurableSendOutcome
+Reeve.Cluster.DurableSendResult.Outcome.init -> void
+Reeve.Cluster.DurableSendResult.State.get -> Reeve.Cluster.DurableCommandState
+Reeve.Cluster.DurableSendResult.State.init -> void
+Reeve.Cluster.EligibilityFilter
+Reeve.Cluster.EligibilityFilter.Forbid(params string![]! capabilities) -> Reeve.Cluster.EligibilityFilter!
+Reeve.Cluster.EligibilityFilter.Forbidden.get -> System.Collections.Generic.IReadOnlyList<string!>!
+Reeve.Cluster.EligibilityFilter.IsEligible(System.Collections.Generic.IEnumerable<string!>! capabilities) -> bool
+Reeve.Cluster.EligibilityFilter.Require(params string![]! capabilities) -> Reeve.Cluster.EligibilityFilter!
+Reeve.Cluster.EligibilityFilter.Required.get -> System.Collections.Generic.IReadOnlyList<string!>!
+Reeve.Cluster.EntityMapping
+Reeve.Cluster.EntityMapping.<Clone>$() -> Reeve.Cluster.EntityMapping!
+Reeve.Cluster.EntityMapping.AggregateType.get -> string!
+Reeve.Cluster.EntityMapping.AggregateType.init -> void
+Reeve.Cluster.EntityMapping.CountedProperties.get -> System.Collections.Generic.IReadOnlySet<string!>?
+Reeve.Cluster.EntityMapping.CountedProperties.init -> void
+Reeve.Cluster.EntityMapping.Deconstruct(out System.Type! EntityType, out string! AggregateType, out System.Func<object!, string!>? Key, out System.Collections.Generic.IReadOnlySet<string!>? CountedProperties) -> void
+Reeve.Cluster.EntityMapping.EntityMapping(System.Type! EntityType, string! AggregateType, System.Func<object!, string!>? Key, System.Collections.Generic.IReadOnlySet<string!>? CountedProperties) -> void
+Reeve.Cluster.EntityMapping.EntityType.get -> System.Type!
+Reeve.Cluster.EntityMapping.EntityType.init -> void
+Reeve.Cluster.EntityMapping.Equals(Reeve.Cluster.EntityMapping? other) -> bool
+Reeve.Cluster.EntityMapping.Key.get -> System.Func<object!, string!>?
+Reeve.Cluster.EntityMapping.Key.init -> void
+Reeve.Cluster.FloorLowering
+Reeve.Cluster.FloorLowering.Changed = 2 -> Reeve.Cluster.FloorLowering
+Reeve.Cluster.FloorLowering.Lowered = 0 -> Reeve.Cluster.FloorLowering
+Reeve.Cluster.FloorLowering.NotAbove = 1 -> Reeve.Cluster.FloorLowering
+Reeve.Cluster.GenerationExtensions
+Reeve.Cluster.IAskHandler
+Reeve.Cluster.IAskHandler.HandleAsync(Reeve.Cluster.AskRequest! request, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task<System.ReadOnlyMemory<byte>>!
+Reeve.Cluster.IChangeAck
+Reeve.Cluster.IChangeAck.AcknowledgeAtCommit() -> void
+Reeve.Cluster.IChangeAck.Seqs.get -> System.Collections.Generic.IReadOnlyList<long>!
+Reeve.Cluster.IChangeAck.WaitAppliedAsync(long seq, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.AckOutcome!>!
+Reeve.Cluster.IChangeLog
+Reeve.Cluster.IChangeLog.AppendAsync(System.Data.Common.DbTransaction! transaction, System.Collections.Generic.IReadOnlyCollection<Reeve.Cluster.ChangeEntry!>! entries, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<long>!
+Reeve.Cluster.IChangeSkip
+Reeve.Cluster.IChangeSkip.CloseAsync(long skipId, string! closedBy, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<long>!
+Reeve.Cluster.IChangeSkip.OpenAsync(Reeve.Cluster.SkipRequest! request, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SkipOpenResult!>!
+Reeve.Cluster.IClusterAsk
+Reeve.Cluster.IClusterAsk.AskAsync(string! kind, string! key, System.ReadOnlyMemory<byte> request, System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.AskResult!>!
+Reeve.Cluster.IClusterAsk.AskMemberAsync(string! replicaId, System.ReadOnlyMemory<byte> request, System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.AskResult!>!
+Reeve.Cluster.IClusterAsk.AskMemberAsync(string! replicaId, System.ReadOnlyMemory<byte> request, System.TimeSpan timeout, System.TimeSpan takeTimeout, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.AskResult!>!
+Reeve.Cluster.IClusterBudget
+Reeve.Cluster.IClusterBudget.ConsumeAsync(string! key, string! id, int limit, System.TimeSpan period, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.BudgetResult!>!
+Reeve.Cluster.IClusterCapabilities
+Reeve.Cluster.IClusterCapabilities.Current.get -> System.Collections.Generic.IReadOnlyList<string!>!
+Reeve.Cluster.IClusterCapabilities.SetAsync(System.Collections.Generic.IEnumerable<string!>! capabilities, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.IClusterClaims
+Reeve.Cluster.IClusterClaims.ClaimAsync(string! key, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ClaimResult!>!
+Reeve.Cluster.IClusterClaims.ReleaseAsync(string! key, System.Guid token, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IClusterCommands
+Reeve.Cluster.IClusterCommands.SendDurableAsync(string! kind, string! key, System.ReadOnlyMemory<byte> command, string! idempotencyKey, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.DurableSendResult!>!
+Reeve.Cluster.IClusterCommands.WaitAsync(string! kind, string! key, string! idempotencyKey, System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.DurableCommandResult!>!
+Reeve.Cluster.IClusterCounter
+Reeve.Cluster.IClusterCounter.IncrementAsync(string! key, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.CounterResult!>!
+Reeve.Cluster.IClusterFloorCommand
+Reeve.Cluster.IClusterFloorCommand.LowerProtocolFloorAsync(int protocol, string! loweredBy, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.FloorLowering>!
+Reeve.Cluster.IClusterFloorCommand.LowerVersionFloorAsync(string? version, string! loweredBy, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.FloorLowering>!
+Reeve.Cluster.IClusterGenerations
+Reeve.Cluster.IClusterGenerations.Current.get -> Reeve.Cluster.IGeneration?
+Reeve.Cluster.IClusterGenerations.TryPin() -> Reeve.Cluster.IGeneration?
+Reeve.Cluster.IClusterMapping
+Reeve.Cluster.IClusterMapping.Entities.get -> System.Collections.Generic.IReadOnlyList<Reeve.Cluster.EntityMapping!>!
+Reeve.Cluster.IClusterMapping.Find(System.Type! entityType) -> Reeve.Cluster.EntityMapping?
+Reeve.Cluster.IClusterMappingBuilder
+Reeve.Cluster.IClusterMappingBuilder.Entity<TEntity>(string! aggregateType) -> Reeve.Cluster.IEntityMappingBuilder<TEntity!>!
+Reeve.Cluster.IClusterOnce
+Reeve.Cluster.IClusterOnce.RunAsync(string! key, string! effect, Reeve.Cluster.OnceMode mode, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.OnceResult!>!
+Reeve.Cluster.IClusterScope
+Reeve.Cluster.IClusterScope.AcknowledgedAtCommit.get -> bool
+Reeve.Cluster.IClusterScope.CommitRefused.get -> bool
+Reeve.Cluster.IClusterScope.Kind.get -> Reeve.Cluster.ClusterScopeKind
+Reeve.Cluster.IClusterScope.OpenTransactions.get -> System.Collections.Generic.IReadOnlyCollection<System.Data.Common.DbTransaction!>!
+Reeve.Cluster.IClusterScope.PinnedGeneration.get -> Reeve.Cluster.IGeneration?
+Reeve.Cluster.IClusterScope.Seqs.get -> System.Collections.Generic.IReadOnlyList<long>!
+Reeve.Cluster.IClusterScopeAccessor
+Reeve.Cluster.IClusterScopeAccessor.BeginBackground() -> Reeve.Cluster.IClusterScopeHandle!
+Reeve.Cluster.IClusterScopeAccessor.BeginUnitOfWork() -> Reeve.Cluster.IClusterScopeHandle!
+Reeve.Cluster.IClusterScopeAccessor.Current.get -> Reeve.Cluster.IClusterScope?
+Reeve.Cluster.IClusterScopeHandle
+Reeve.Cluster.IClusterScopeHandle.Scope.get -> Reeve.Cluster.IClusterScope!
+Reeve.Cluster.IClusterSingleFlight
+Reeve.Cluster.IClusterSingleFlight.RunAsync(string! key, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<byte[]!>!>! compute, System.TimeSpan claimTtl, System.TimeSpan resultTtl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SingleFlightResult!>!
+Reeve.Cluster.IClusterSlots
+Reeve.Cluster.IClusterSlots.AcquireAsync(string! key, string! id, int limit, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SlotAcquireResult!>!
+Reeve.Cluster.IClusterSlots.ReleaseAsync(string! key, string! id, System.Guid? token, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IClusterSlots.RenewAsync(string! key, string! id, System.Guid token, System.TimeSpan ttl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SlotRenewResult>!
+Reeve.Cluster.IClusterStatus
+Reeve.Cluster.IClusterStatus.ReadAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ClusterStatusRead!>!
+Reeve.Cluster.IClusterVersionGate
+Reeve.Cluster.IClusterVersionGate.AllMembersAtLeastAsync(string! version, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IClusterVersionGate.AllMembersSpeakAsync(int protocol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IClusterVersionGate.RequireProtocolAsync(int protocol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IClusterVersionGate.RequireVersionAsync(string! version, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IDurableCommandHandler
+Reeve.Cluster.IDurableCommandHandler.HandleAsync(Reeve.Cluster.DurableCommand! command, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task<System.ReadOnlyMemory<byte>>!
+Reeve.Cluster.IEntityMappingBuilder<TEntity>
+Reeve.Cluster.IEntityMappingBuilder<TEntity>.AllColumns() -> Reeve.Cluster.IEntityMappingBuilder<TEntity!>!
+Reeve.Cluster.IEntityMappingBuilder<TEntity>.Columns(params System.Linq.Expressions.Expression<System.Func<TEntity!, object?>!>![]! properties) -> Reeve.Cluster.IEntityMappingBuilder<TEntity!>!
+Reeve.Cluster.IEntityMappingBuilder<TEntity>.Columns(params string![]! propertyNames) -> Reeve.Cluster.IEntityMappingBuilder<TEntity!>!
+Reeve.Cluster.IEntityMappingBuilder<TEntity>.Key(System.Func<TEntity!, string!>! key) -> Reeve.Cluster.IEntityMappingBuilder<TEntity!>!
+Reeve.Cluster.IEntityMappingBuilder<TEntity>.NoKey() -> Reeve.Cluster.IEntityMappingBuilder<TEntity!>!
+Reeve.Cluster.IFenceSink
+Reeve.Cluster.IFenceSink.AbortConnectionsAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.IGeneration
+Reeve.Cluster.IGeneration.Get(string! aggregateType) -> object!
+Reeve.Cluster.IGeneration.Head.get -> long
+Reeve.Cluster.IGeneration.HeadToken.get -> System.Guid?
+Reeve.Cluster.IGeneration.Superseded(string! aggregateType) -> System.Threading.CancellationToken
+Reeve.Cluster.IGeneration.TryActivate(string! aggregateType, System.Action! activate) -> bool
+Reeve.Cluster.IKeyedResources
+Reeve.Cluster.IKeyedResources.CleanUpAsync(string! kind, string! key, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+Reeve.Cluster.IKeyedResources.CreateAsync(string! kind, string! key, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.CreateOutcome>!
+Reeve.Cluster.IOwnedUnit
+Reeve.Cluster.IOwnedUnit.OnAcquiredAsync(Reeve.Cluster.OwnedContext! context, System.Threading.CancellationToken stop) -> System.Threading.Tasks.Task!
+Reeve.Cluster.IOwnedUnit.OnLostAsync(Reeve.Cluster.OwnedContext! context) -> System.Threading.Tasks.Task!
+Reeve.Cluster.IReconciler
+Reeve.Cluster.IReconciler.AggregateType.get -> string!
+Reeve.Cluster.IReconciler.DependsOn.get -> System.Collections.Generic.IReadOnlyList<string!>!
+Reeve.Cluster.IReconciler.ReconcileAsync(Reeve.Cluster.ReconcileContext! context, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task<Reeve.Cluster.ReconcileResult!>!
+Reeve.Cluster.IReplicaPhase
+Reeve.Cluster.IReplicaPhase.Current.get -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.IReplicaPhase.WaitForChangeAsync(Reeve.Cluster.ReplicaPhase seen, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ReplicaPhase>!
+Reeve.Cluster.ISnapshotSession
+Reeve.Cluster.ISnapshotSession.Connection.get -> System.Data.Common.DbConnection!
+Reeve.Cluster.ISnapshotSession.Transaction.get -> System.Data.Common.DbTransaction!
+Reeve.Cluster.IStatusSectionSource
+Reeve.Cluster.IStatusSectionSource.CollectAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<Reeve.Cluster.StatusSection!>
+Reeve.Cluster.IStatusSectionSource.Name.get -> string!
+Reeve.Cluster.InDoubtPolicy
+Reeve.Cluster.InDoubtPolicy.Complete = 1 -> Reeve.Cluster.InDoubtPolicy
+Reeve.Cluster.InDoubtPolicy.ReRun = 0 -> Reeve.Cluster.InDoubtPolicy
+Reeve.Cluster.MemberRowState
+Reeve.Cluster.MemberRowState.Active = 1 -> Reeve.Cluster.MemberRowState
+Reeve.Cluster.MemberRowState.Draining = 3 -> Reeve.Cluster.MemberRowState
+Reeve.Cluster.MemberRowState.Fenced = 2 -> Reeve.Cluster.MemberRowState
+Reeve.Cluster.MemberRowState.Joining = 0 -> Reeve.Cluster.MemberRowState
+Reeve.Cluster.NoFenceSink
+Reeve.Cluster.NoFenceSink.AbortConnectionsAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.NoFenceSink.NoFenceSink() -> void
+Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.NotAwaitedReason.Applier = 0 -> Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.NotAwaitedReason.AtCommit = 1 -> Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.NotAwaitedReason.Draining = 3 -> Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.NotAwaitedReason.Fenced = 4 -> Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.NotAwaitedReason.Joining = 2 -> Reeve.Cluster.NotAwaitedReason
+Reeve.Cluster.OnceMode
+Reeve.Cluster.OnceMode.AtLeastOnce = 1 -> Reeve.Cluster.OnceMode
+Reeve.Cluster.OnceMode.AtMostOnce = 0 -> Reeve.Cluster.OnceMode
+Reeve.Cluster.OnceResult
+Reeve.Cluster.OnceResult.AlreadyCompleted
+Reeve.Cluster.OnceResult.AlreadyCompleted.AlreadyCompleted() -> void
+Reeve.Cluster.OnceResult.AlreadyCompleted.Equals(Reeve.Cluster.OnceResult.AlreadyCompleted? other) -> bool
+Reeve.Cluster.OnceResult.Completed
+Reeve.Cluster.OnceResult.Completed.Completed() -> void
+Reeve.Cluster.OnceResult.Completed.Equals(Reeve.Cluster.OnceResult.Completed? other) -> bool
+Reeve.Cluster.OnceResult.CompletionUnknown
+Reeve.Cluster.OnceResult.CompletionUnknown.CompletionUnknown() -> void
+Reeve.Cluster.OnceResult.CompletionUnknown.Equals(Reeve.Cluster.OnceResult.CompletionUnknown? other) -> bool
+Reeve.Cluster.OnceResult.InDoubt
+Reeve.Cluster.OnceResult.InDoubt.Equals(Reeve.Cluster.OnceResult.InDoubt? other) -> bool
+Reeve.Cluster.OnceResult.InDoubt.InDoubt() -> void
+Reeve.Cluster.OnceResult.IsCompleted.get -> bool
+Reeve.Cluster.OnceResult.NotServing
+Reeve.Cluster.OnceResult.NotServing.Equals(Reeve.Cluster.OnceResult.NotServing? other) -> bool
+Reeve.Cluster.OnceResult.NotServing.NotServing() -> void
+Reeve.Cluster.OnceResult.OnceResult(Reeve.Cluster.OnceResult! original) -> void
+Reeve.Cluster.OnceResult.Running
+Reeve.Cluster.OnceResult.Running.Deconstruct(out string! Holder) -> void
+Reeve.Cluster.OnceResult.Running.Equals(Reeve.Cluster.OnceResult.Running? other) -> bool
+Reeve.Cluster.OnceResult.Running.Holder.get -> string!
+Reeve.Cluster.OnceResult.Running.Holder.init -> void
+Reeve.Cluster.OnceResult.Running.Running(string! Holder) -> void
+Reeve.Cluster.OnceResult.Unknown
+Reeve.Cluster.OnceResult.Unknown.Equals(Reeve.Cluster.OnceResult.Unknown? other) -> bool
+Reeve.Cluster.OnceResult.Unknown.Unknown() -> void
+Reeve.Cluster.OwnedContext
+Reeve.Cluster.OwnedContext.OwnedContext() -> void
+Reeve.Cluster.OwnershipLostException
+Reeve.Cluster.OwnershipLostException.OwnershipLostException() -> void
+Reeve.Cluster.OwnershipLostException.OwnershipLostException(string! message) -> void
+Reeve.Cluster.OwnershipLostException.OwnershipLostException(string! message, System.Exception! innerException) -> void
+Reeve.Cluster.ReconcileContext
+Reeve.Cluster.ReconcileContext.AggregateType.get -> string!
+Reeve.Cluster.ReconcileContext.Attempt.get -> int
+Reeve.Cluster.ReconcileContext.Connection.get -> System.Data.Common.DbConnection!
+Reeve.Cluster.ReconcileContext.Dependencies.get -> System.Collections.Generic.IReadOnlyCollection<string!>!
+Reeve.Cluster.ReconcileContext.FullLoad.get -> bool
+Reeve.Cluster.ReconcileContext.GetDependency(string! aggregateType) -> object!
+Reeve.Cluster.ReconcileContext.GetDependency<T>(string! aggregateType) -> T!
+Reeve.Cluster.ReconcileContext.Head.get -> long
+Reeve.Cluster.ReconcileContext.Hints.get -> System.Collections.Generic.IReadOnlySet<string!>?
+Reeve.Cluster.ReconcileContext.OpenSnapshotSessionAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ISnapshotSession!>!
+Reeve.Cluster.ReconcileContext.PassNumber.get -> long
+Reeve.Cluster.ReconcileContext.Previous.get -> object?
+Reeve.Cluster.ReconcileContext.ReconcileContext(string! aggregateType, long head, long passNumber, int attempt, bool fullLoad, System.Collections.Generic.IReadOnlySet<string!>? hints, object? previous, System.Data.Common.DbTransaction! transaction, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Reeve.Cluster.ISnapshotSession!>!>! openSnapshotSession) -> void
+Reeve.Cluster.ReconcileContext.ReconcileContext(string! aggregateType, long head, long passNumber, int attempt, bool fullLoad, System.Collections.Generic.IReadOnlySet<string!>? hints, object? previous, System.Data.Common.DbTransaction! transaction, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Reeve.Cluster.ISnapshotSession!>!>! openSnapshotSession, System.Collections.Generic.IReadOnlyDictionary<string!, object!>! dependencies) -> void
+Reeve.Cluster.ReconcileContext.Transaction.get -> System.Data.Common.DbTransaction!
+Reeve.Cluster.ReconcileResult
+Reeve.Cluster.ReconcileResult.<Clone>$() -> Reeve.Cluster.ReconcileResult!
+Reeve.Cluster.ReconcileResult.Deconstruct(out object! State) -> void
+Reeve.Cluster.ReconcileResult.Deferred.get -> System.Func<Reeve.Cluster.IGeneration!, System.Threading.CancellationToken, System.Threading.Tasks.Task!>?
+Reeve.Cluster.ReconcileResult.Deferred.init -> void
+Reeve.Cluster.ReconcileResult.Equals(Reeve.Cluster.ReconcileResult? other) -> bool
+Reeve.Cluster.ReconcileResult.ReconcileResult(object! State) -> void
+Reeve.Cluster.ReconcileResult.State.get -> object!
+Reeve.Cluster.ReconcileResult.State.init -> void
+Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Activated = 3 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.CatchingUp = 2 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Draining = 7 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Exited = 8 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Fenced = 6 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Fencing = 5 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Loading = 1 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Serving = 4 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.ReplicaPhase.Starting = 0 -> Reeve.Cluster.ReplicaPhase
+Reeve.Cluster.SingleFlightResult
+Reeve.Cluster.SingleFlightResult.Computed
+Reeve.Cluster.SingleFlightResult.Computed.Computed(byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.Computed.Deconstruct(out byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.Computed.Equals(Reeve.Cluster.SingleFlightResult.Computed? other) -> bool
+Reeve.Cluster.SingleFlightResult.Computed.Value.get -> byte[]!
+Reeve.Cluster.SingleFlightResult.Computed.Value.init -> void
+Reeve.Cluster.SingleFlightResult.ComputedRefused
+Reeve.Cluster.SingleFlightResult.ComputedRefused.ComputedRefused(byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.ComputedRefused.Deconstruct(out byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.ComputedRefused.Equals(Reeve.Cluster.SingleFlightResult.ComputedRefused? other) -> bool
+Reeve.Cluster.SingleFlightResult.ComputedRefused.Value.get -> byte[]!
+Reeve.Cluster.SingleFlightResult.ComputedRefused.Value.init -> void
+Reeve.Cluster.SingleFlightResult.ComputedUnknown
+Reeve.Cluster.SingleFlightResult.ComputedUnknown.ComputedUnknown(byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.ComputedUnknown.Deconstruct(out byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.ComputedUnknown.Equals(Reeve.Cluster.SingleFlightResult.ComputedUnknown? other) -> bool
+Reeve.Cluster.SingleFlightResult.ComputedUnknown.Value.get -> byte[]!
+Reeve.Cluster.SingleFlightResult.ComputedUnknown.Value.init -> void
+Reeve.Cluster.SingleFlightResult.NotServing
+Reeve.Cluster.SingleFlightResult.NotServing.Equals(Reeve.Cluster.SingleFlightResult.NotServing? other) -> bool
+Reeve.Cluster.SingleFlightResult.NotServing.NotServing() -> void
+Reeve.Cluster.SingleFlightResult.SingleFlightResult(Reeve.Cluster.SingleFlightResult! original) -> void
+Reeve.Cluster.SingleFlightResult.TryGetValue(out byte[]? value) -> bool
+Reeve.Cluster.SingleFlightResult.Unknown
+Reeve.Cluster.SingleFlightResult.Unknown.Equals(Reeve.Cluster.SingleFlightResult.Unknown? other) -> bool
+Reeve.Cluster.SingleFlightResult.Unknown.Unknown() -> void
+Reeve.Cluster.SingleFlightResult.Waited
+Reeve.Cluster.SingleFlightResult.Waited.Deconstruct(out byte[]! Value) -> void
+Reeve.Cluster.SingleFlightResult.Waited.Equals(Reeve.Cluster.SingleFlightResult.Waited? other) -> bool
+Reeve.Cluster.SingleFlightResult.Waited.Value.get -> byte[]!
+Reeve.Cluster.SingleFlightResult.Waited.Value.init -> void
+Reeve.Cluster.SingleFlightResult.Waited.Waited(byte[]! Value) -> void
+Reeve.Cluster.SkipOpenResult
+Reeve.Cluster.SkipOpenResult.Opened
+Reeve.Cluster.SkipOpenResult.Opened.Deconstruct(out long SkipId) -> void
+Reeve.Cluster.SkipOpenResult.Opened.Equals(Reeve.Cluster.SkipOpenResult.Opened? other) -> bool
+Reeve.Cluster.SkipOpenResult.Opened.Opened(long SkipId) -> void
+Reeve.Cluster.SkipOpenResult.Opened.SkipId.get -> long
+Reeve.Cluster.SkipOpenResult.Opened.SkipId.init -> void
+Reeve.Cluster.SkipOpenResult.Refused
+Reeve.Cluster.SkipOpenResult.Refused.AckedSeq.get -> long
+Reeve.Cluster.SkipOpenResult.Refused.AckedSeq.init -> void
+Reeve.Cluster.SkipOpenResult.Refused.Deconstruct(out long AckedSeq) -> void
+Reeve.Cluster.SkipOpenResult.Refused.Equals(Reeve.Cluster.SkipOpenResult.Refused? other) -> bool
+Reeve.Cluster.SkipOpenResult.Refused.Refused(long AckedSeq) -> void
+Reeve.Cluster.SkipOpenResult.SkipOpenResult(Reeve.Cluster.SkipOpenResult! original) -> void
+Reeve.Cluster.SkipRequest
+Reeve.Cluster.SkipRequest.<Clone>$() -> Reeve.Cluster.SkipRequest!
+Reeve.Cluster.SkipRequest.AggregateType.get -> string!
+Reeve.Cluster.SkipRequest.AggregateType.init -> void
+Reeve.Cluster.SkipRequest.Deconstruct(out string! AggregateType, out long FromSeq, out string! Reason, out string! OpenedBy) -> void
+Reeve.Cluster.SkipRequest.Equals(Reeve.Cluster.SkipRequest? other) -> bool
+Reeve.Cluster.SkipRequest.FromSeq.get -> long
+Reeve.Cluster.SkipRequest.FromSeq.init -> void
+Reeve.Cluster.SkipRequest.OpenedBy.get -> string!
+Reeve.Cluster.SkipRequest.OpenedBy.init -> void
+Reeve.Cluster.SkipRequest.Reason.get -> string!
+Reeve.Cluster.SkipRequest.Reason.init -> void
+Reeve.Cluster.SkipRequest.SkipRequest(string! AggregateType, long FromSeq, string! Reason, string! OpenedBy) -> void
+Reeve.Cluster.SlotAcquireResult
+Reeve.Cluster.SlotAcquireResult.Acquired
+Reeve.Cluster.SlotAcquireResult.Acquired.Acquired(System.Guid Token) -> void
+Reeve.Cluster.SlotAcquireResult.Acquired.Deconstruct(out System.Guid Token) -> void
+Reeve.Cluster.SlotAcquireResult.Acquired.Equals(Reeve.Cluster.SlotAcquireResult.Acquired? other) -> bool
+Reeve.Cluster.SlotAcquireResult.Acquired.Token.get -> System.Guid
+Reeve.Cluster.SlotAcquireResult.Acquired.Token.init -> void
+Reeve.Cluster.SlotAcquireResult.Full
+Reeve.Cluster.SlotAcquireResult.Full.Equals(Reeve.Cluster.SlotAcquireResult.Full? other) -> bool
+Reeve.Cluster.SlotAcquireResult.Full.Full() -> void
+Reeve.Cluster.SlotAcquireResult.IsAcquired.get -> bool
+Reeve.Cluster.SlotAcquireResult.NotServing
+Reeve.Cluster.SlotAcquireResult.NotServing.Equals(Reeve.Cluster.SlotAcquireResult.NotServing? other) -> bool
+Reeve.Cluster.SlotAcquireResult.NotServing.NotServing() -> void
+Reeve.Cluster.SlotAcquireResult.SlotAcquireResult(Reeve.Cluster.SlotAcquireResult! original) -> void
+Reeve.Cluster.SlotAcquireResult.TryGetToken(out System.Guid token) -> bool
+Reeve.Cluster.SlotAcquireResult.Unknown
+Reeve.Cluster.SlotAcquireResult.Unknown.Equals(Reeve.Cluster.SlotAcquireResult.Unknown? other) -> bool
+Reeve.Cluster.SlotAcquireResult.Unknown.Unknown() -> void
+Reeve.Cluster.SlotLostException
+Reeve.Cluster.SlotLostException.SlotLostException() -> void
+Reeve.Cluster.SlotLostException.SlotLostException(string! message) -> void
+Reeve.Cluster.SlotLostException.SlotLostException(string! message, System.Exception! innerException) -> void
+Reeve.Cluster.SlotRenewResult
+Reeve.Cluster.SlotRenewResult.Ended = 1 -> Reeve.Cluster.SlotRenewResult
+Reeve.Cluster.SlotRenewResult.NotServing = 2 -> Reeve.Cluster.SlotRenewResult
+Reeve.Cluster.SlotRenewResult.Renewed = 0 -> Reeve.Cluster.SlotRenewResult
+Reeve.Cluster.SlotRenewResult.Unknown = 3 -> Reeve.Cluster.SlotRenewResult
+Reeve.Cluster.StatusSection
+Reeve.Cluster.StatusSection.<Clone>$() -> Reeve.Cluster.StatusSection!
+Reeve.Cluster.StatusSection.Equals(Reeve.Cluster.StatusSection? other) -> bool
+Reeve.Cluster.StatusSection.Name.get -> string!
+Reeve.Cluster.StatusSection.Name.init -> void
+Reeve.Cluster.StatusSection.StatusSection() -> void
+Reeve.Cluster.StatusSection.Values.get -> System.Collections.Generic.IReadOnlyDictionary<string!, object?>!
+Reeve.Cluster.StatusSection.Values.init -> void
+Reeve.Cluster.UnconfirmedReason
+Reeve.Cluster.UnconfirmedReason.Draining = 1 -> Reeve.Cluster.UnconfirmedReason
+Reeve.Cluster.UnconfirmedReason.Fenced = 0 -> Reeve.Cluster.UnconfirmedReason
+Reeve.Cluster.UnconfirmedReason.Timeout = 2 -> Reeve.Cluster.UnconfirmedReason
+Reeve.Cluster.UnitKindOptions
+Reeve.Cluster.UnitKindOptions.Convergent.get -> bool
+Reeve.Cluster.UnitKindOptions.Convergent.set -> void
+Reeve.Cluster.UnitKindOptions.Eligibility.get -> Reeve.Cluster.EligibilityFilter!
+Reeve.Cluster.UnitKindOptions.Eligibility.set -> void
+Reeve.Cluster.UnitKindOptions.Policy.get -> Reeve.Cluster.AdoptionPolicy
+Reeve.Cluster.UnitKindOptions.Policy.set -> void
+Reeve.Cluster.UnitKindOptions.RedisFence.get -> bool
+Reeve.Cluster.UnitKindOptions.RedisFence.set -> void
+Reeve.Cluster.UnitKindOptions.StartTime.get -> System.TimeSpan
+Reeve.Cluster.UnitKindOptions.StartTime.set -> void
+Reeve.Cluster.UnitKindOptions.UnitKindOptions() -> void
+abstract Reeve.Cluster.AckOutcome.<Clone>$() -> Reeve.Cluster.AckOutcome!
+abstract Reeve.Cluster.BudgetResult.<Clone>$() -> Reeve.Cluster.BudgetResult!
+abstract Reeve.Cluster.ClaimResult.<Clone>$() -> Reeve.Cluster.ClaimResult!
+abstract Reeve.Cluster.CounterResult.<Clone>$() -> Reeve.Cluster.CounterResult!
+abstract Reeve.Cluster.OnceResult.<Clone>$() -> Reeve.Cluster.OnceResult!
+abstract Reeve.Cluster.OwnedContext.Configuration.get -> Reeve.Cluster.IGeneration!
+abstract Reeve.Cluster.OwnedContext.EndAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+abstract Reeve.Cluster.OwnedContext.EnsureOwner() -> void
+abstract Reeve.Cluster.OwnedContext.Key.get -> string!
+abstract Reeve.Cluster.OwnedContext.Kind.get -> string!
+abstract Reeve.Cluster.OwnedContext.Token.get -> long
+abstract Reeve.Cluster.SingleFlightResult.<Clone>$() -> Reeve.Cluster.SingleFlightResult!
+abstract Reeve.Cluster.SkipOpenResult.<Clone>$() -> Reeve.Cluster.SkipOpenResult!
+abstract Reeve.Cluster.SlotAcquireResult.<Clone>$() -> Reeve.Cluster.SlotAcquireResult!
+const Reeve.Cluster.ClusterCapabilities.UnitPrefix = "unit:" -> string!
+const Reeve.Cluster.ClusterOptions.SectionName = "Cluster" -> string!
+override Reeve.Cluster.AckOutcome.Acknowledged.<Clone>$() -> Reeve.Cluster.AckOutcome.Acknowledged!
+override Reeve.Cluster.AckOutcome.Acknowledged.Equals(object? obj) -> bool
+override Reeve.Cluster.AckOutcome.Acknowledged.GetHashCode() -> int
+override Reeve.Cluster.AckOutcome.Acknowledged.ToString() -> string!
+override Reeve.Cluster.AckOutcome.Equals(object? obj) -> bool
+override Reeve.Cluster.AckOutcome.GetHashCode() -> int
+override Reeve.Cluster.AckOutcome.NotAwaited.<Clone>$() -> Reeve.Cluster.AckOutcome.NotAwaited!
+override Reeve.Cluster.AckOutcome.NotAwaited.Equals(object? obj) -> bool
+override Reeve.Cluster.AckOutcome.NotAwaited.GetHashCode() -> int
+override Reeve.Cluster.AckOutcome.NotAwaited.ToString() -> string!
+override Reeve.Cluster.AckOutcome.ToString() -> string!
+override Reeve.Cluster.AckOutcome.Unconfirmed.<Clone>$() -> Reeve.Cluster.AckOutcome.Unconfirmed!
+override Reeve.Cluster.AckOutcome.Unconfirmed.Equals(object? obj) -> bool
+override Reeve.Cluster.AckOutcome.Unconfirmed.GetHashCode() -> int
+override Reeve.Cluster.AckOutcome.Unconfirmed.ToString() -> string!
+override Reeve.Cluster.AskRequest.Equals(object? obj) -> bool
+override Reeve.Cluster.AskRequest.GetHashCode() -> int
+override Reeve.Cluster.AskRequest.ToString() -> string!
+override Reeve.Cluster.AskResult.Equals(object? obj) -> bool
+override Reeve.Cluster.AskResult.GetHashCode() -> int
+override Reeve.Cluster.AskResult.ToString() -> string!
+override Reeve.Cluster.BudgetResult.AlreadyCounted.<Clone>$() -> Reeve.Cluster.BudgetResult.AlreadyCounted!
+override Reeve.Cluster.BudgetResult.AlreadyCounted.Equals(object? obj) -> bool
+override Reeve.Cluster.BudgetResult.AlreadyCounted.GetHashCode() -> int
+override Reeve.Cluster.BudgetResult.AlreadyCounted.ToString() -> string!
+override Reeve.Cluster.BudgetResult.Equals(object? obj) -> bool
+override Reeve.Cluster.BudgetResult.Exhausted.<Clone>$() -> Reeve.Cluster.BudgetResult.Exhausted!
+override Reeve.Cluster.BudgetResult.Exhausted.Equals(object? obj) -> bool
+override Reeve.Cluster.BudgetResult.Exhausted.GetHashCode() -> int
+override Reeve.Cluster.BudgetResult.Exhausted.ToString() -> string!
+override Reeve.Cluster.BudgetResult.GetHashCode() -> int
+override Reeve.Cluster.BudgetResult.Granted.<Clone>$() -> Reeve.Cluster.BudgetResult.Granted!
+override Reeve.Cluster.BudgetResult.Granted.Equals(object? obj) -> bool
+override Reeve.Cluster.BudgetResult.Granted.GetHashCode() -> int
+override Reeve.Cluster.BudgetResult.Granted.ToString() -> string!
+override Reeve.Cluster.BudgetResult.NotServing.<Clone>$() -> Reeve.Cluster.BudgetResult.NotServing!
+override Reeve.Cluster.BudgetResult.NotServing.Equals(object? obj) -> bool
+override Reeve.Cluster.BudgetResult.NotServing.GetHashCode() -> int
+override Reeve.Cluster.BudgetResult.NotServing.ToString() -> string!
+override Reeve.Cluster.BudgetResult.ToString() -> string!
+override Reeve.Cluster.BudgetResult.Unknown.<Clone>$() -> Reeve.Cluster.BudgetResult.Unknown!
+override Reeve.Cluster.BudgetResult.Unknown.Equals(object? obj) -> bool
+override Reeve.Cluster.BudgetResult.Unknown.GetHashCode() -> int
+override Reeve.Cluster.BudgetResult.Unknown.ToString() -> string!
+override Reeve.Cluster.ChangeEntry.Equals(object? obj) -> bool
+override Reeve.Cluster.ChangeEntry.GetHashCode() -> int
+override Reeve.Cluster.ChangeEntry.ToString() -> string!
+override Reeve.Cluster.ClaimResult.Equals(object? obj) -> bool
+override Reeve.Cluster.ClaimResult.GetHashCode() -> int
+override Reeve.Cluster.ClaimResult.Lost.<Clone>$() -> Reeve.Cluster.ClaimResult.Lost!
+override Reeve.Cluster.ClaimResult.Lost.Equals(object? obj) -> bool
+override Reeve.Cluster.ClaimResult.Lost.GetHashCode() -> int
+override Reeve.Cluster.ClaimResult.Lost.ToString() -> string!
+override Reeve.Cluster.ClaimResult.NotServing.<Clone>$() -> Reeve.Cluster.ClaimResult.NotServing!
+override Reeve.Cluster.ClaimResult.NotServing.Equals(object? obj) -> bool
+override Reeve.Cluster.ClaimResult.NotServing.GetHashCode() -> int
+override Reeve.Cluster.ClaimResult.NotServing.ToString() -> string!
+override Reeve.Cluster.ClaimResult.ToString() -> string!
+override Reeve.Cluster.ClaimResult.Unknown.<Clone>$() -> Reeve.Cluster.ClaimResult.Unknown!
+override Reeve.Cluster.ClaimResult.Unknown.Equals(object? obj) -> bool
+override Reeve.Cluster.ClaimResult.Unknown.GetHashCode() -> int
+override Reeve.Cluster.ClaimResult.Unknown.ToString() -> string!
+override Reeve.Cluster.ClaimResult.Won.<Clone>$() -> Reeve.Cluster.ClaimResult.Won!
+override Reeve.Cluster.ClaimResult.Won.Equals(object? obj) -> bool
+override Reeve.Cluster.ClaimResult.Won.GetHashCode() -> int
+override Reeve.Cluster.ClaimResult.Won.ToString() -> string!
+override Reeve.Cluster.ClusterFenceRecord.Equals(object? obj) -> bool
+override Reeve.Cluster.ClusterFenceRecord.GetHashCode() -> int
+override Reeve.Cluster.ClusterFenceRecord.ToString() -> string!
+override Reeve.Cluster.ClusterMemberStatus.Equals(object? obj) -> bool
+override Reeve.Cluster.ClusterMemberStatus.GetHashCode() -> int
+override Reeve.Cluster.ClusterMemberStatus.ToString() -> string!
+override Reeve.Cluster.ClusterStatusRead.Equals(object? obj) -> bool
+override Reeve.Cluster.ClusterStatusRead.GetHashCode() -> int
+override Reeve.Cluster.ClusterStatusRead.ToString() -> string!
+override Reeve.Cluster.ClusterStatusSection.Equals(object? obj) -> bool
+override Reeve.Cluster.ClusterStatusSection.GetHashCode() -> int
+override Reeve.Cluster.ClusterStatusSection.ToString() -> string!
+override Reeve.Cluster.CounterResult.Equals(object? obj) -> bool
+override Reeve.Cluster.CounterResult.GetHashCode() -> int
+override Reeve.Cluster.CounterResult.Incremented.<Clone>$() -> Reeve.Cluster.CounterResult.Incremented!
+override Reeve.Cluster.CounterResult.Incremented.Equals(object? obj) -> bool
+override Reeve.Cluster.CounterResult.Incremented.GetHashCode() -> int
+override Reeve.Cluster.CounterResult.Incremented.ToString() -> string!
+override Reeve.Cluster.CounterResult.ToString() -> string!
+override Reeve.Cluster.CounterResult.Unknown.<Clone>$() -> Reeve.Cluster.CounterResult.Unknown!
+override Reeve.Cluster.CounterResult.Unknown.Equals(object? obj) -> bool
+override Reeve.Cluster.CounterResult.Unknown.GetHashCode() -> int
+override Reeve.Cluster.CounterResult.Unknown.ToString() -> string!
+override Reeve.Cluster.DurableCommand.Equals(object? obj) -> bool
+override Reeve.Cluster.DurableCommand.GetHashCode() -> int
+override Reeve.Cluster.DurableCommand.ToString() -> string!
+override Reeve.Cluster.DurableCommandResult.Equals(object? obj) -> bool
+override Reeve.Cluster.DurableCommandResult.GetHashCode() -> int
+override Reeve.Cluster.DurableCommandResult.ToString() -> string!
+override Reeve.Cluster.DurableSendResult.Equals(object? obj) -> bool
+override Reeve.Cluster.DurableSendResult.GetHashCode() -> int
+override Reeve.Cluster.DurableSendResult.ToString() -> string!
+override Reeve.Cluster.EntityMapping.Equals(object? obj) -> bool
+override Reeve.Cluster.EntityMapping.GetHashCode() -> int
+override Reeve.Cluster.EntityMapping.ToString() -> string!
+override Reeve.Cluster.OnceResult.AlreadyCompleted.<Clone>$() -> Reeve.Cluster.OnceResult.AlreadyCompleted!
+override Reeve.Cluster.OnceResult.AlreadyCompleted.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.AlreadyCompleted.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.AlreadyCompleted.ToString() -> string!
+override Reeve.Cluster.OnceResult.Completed.<Clone>$() -> Reeve.Cluster.OnceResult.Completed!
+override Reeve.Cluster.OnceResult.Completed.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.Completed.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.Completed.ToString() -> string!
+override Reeve.Cluster.OnceResult.CompletionUnknown.<Clone>$() -> Reeve.Cluster.OnceResult.CompletionUnknown!
+override Reeve.Cluster.OnceResult.CompletionUnknown.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.CompletionUnknown.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.CompletionUnknown.ToString() -> string!
+override Reeve.Cluster.OnceResult.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.InDoubt.<Clone>$() -> Reeve.Cluster.OnceResult.InDoubt!
+override Reeve.Cluster.OnceResult.InDoubt.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.InDoubt.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.InDoubt.ToString() -> string!
+override Reeve.Cluster.OnceResult.NotServing.<Clone>$() -> Reeve.Cluster.OnceResult.NotServing!
+override Reeve.Cluster.OnceResult.NotServing.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.NotServing.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.NotServing.ToString() -> string!
+override Reeve.Cluster.OnceResult.Running.<Clone>$() -> Reeve.Cluster.OnceResult.Running!
+override Reeve.Cluster.OnceResult.Running.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.Running.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.Running.ToString() -> string!
+override Reeve.Cluster.OnceResult.ToString() -> string!
+override Reeve.Cluster.OnceResult.Unknown.<Clone>$() -> Reeve.Cluster.OnceResult.Unknown!
+override Reeve.Cluster.OnceResult.Unknown.Equals(object? obj) -> bool
+override Reeve.Cluster.OnceResult.Unknown.GetHashCode() -> int
+override Reeve.Cluster.OnceResult.Unknown.ToString() -> string!
+override Reeve.Cluster.ReconcileResult.Equals(object? obj) -> bool
+override Reeve.Cluster.ReconcileResult.GetHashCode() -> int
+override Reeve.Cluster.ReconcileResult.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.Computed.<Clone>$() -> Reeve.Cluster.SingleFlightResult.Computed!
+override Reeve.Cluster.SingleFlightResult.Computed.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.Computed.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.Computed.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.ComputedRefused.<Clone>$() -> Reeve.Cluster.SingleFlightResult.ComputedRefused!
+override Reeve.Cluster.SingleFlightResult.ComputedRefused.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.ComputedRefused.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.ComputedRefused.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.ComputedUnknown.<Clone>$() -> Reeve.Cluster.SingleFlightResult.ComputedUnknown!
+override Reeve.Cluster.SingleFlightResult.ComputedUnknown.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.ComputedUnknown.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.ComputedUnknown.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.NotServing.<Clone>$() -> Reeve.Cluster.SingleFlightResult.NotServing!
+override Reeve.Cluster.SingleFlightResult.NotServing.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.NotServing.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.NotServing.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.Unknown.<Clone>$() -> Reeve.Cluster.SingleFlightResult.Unknown!
+override Reeve.Cluster.SingleFlightResult.Unknown.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.Unknown.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.Unknown.ToString() -> string!
+override Reeve.Cluster.SingleFlightResult.Waited.<Clone>$() -> Reeve.Cluster.SingleFlightResult.Waited!
+override Reeve.Cluster.SingleFlightResult.Waited.Equals(object? obj) -> bool
+override Reeve.Cluster.SingleFlightResult.Waited.GetHashCode() -> int
+override Reeve.Cluster.SingleFlightResult.Waited.ToString() -> string!
+override Reeve.Cluster.SkipOpenResult.Equals(object? obj) -> bool
+override Reeve.Cluster.SkipOpenResult.GetHashCode() -> int
+override Reeve.Cluster.SkipOpenResult.Opened.<Clone>$() -> Reeve.Cluster.SkipOpenResult.Opened!
+override Reeve.Cluster.SkipOpenResult.Opened.Equals(object? obj) -> bool
+override Reeve.Cluster.SkipOpenResult.Opened.GetHashCode() -> int
+override Reeve.Cluster.SkipOpenResult.Opened.ToString() -> string!
+override Reeve.Cluster.SkipOpenResult.Refused.<Clone>$() -> Reeve.Cluster.SkipOpenResult.Refused!
+override Reeve.Cluster.SkipOpenResult.Refused.Equals(object? obj) -> bool
+override Reeve.Cluster.SkipOpenResult.Refused.GetHashCode() -> int
+override Reeve.Cluster.SkipOpenResult.Refused.ToString() -> string!
+override Reeve.Cluster.SkipOpenResult.ToString() -> string!
+override Reeve.Cluster.SkipRequest.Equals(object? obj) -> bool
+override Reeve.Cluster.SkipRequest.GetHashCode() -> int
+override Reeve.Cluster.SkipRequest.ToString() -> string!
+override Reeve.Cluster.SlotAcquireResult.Acquired.<Clone>$() -> Reeve.Cluster.SlotAcquireResult.Acquired!
+override Reeve.Cluster.SlotAcquireResult.Acquired.Equals(object? obj) -> bool
+override Reeve.Cluster.SlotAcquireResult.Acquired.GetHashCode() -> int
+override Reeve.Cluster.SlotAcquireResult.Acquired.ToString() -> string!
+override Reeve.Cluster.SlotAcquireResult.Equals(object? obj) -> bool
+override Reeve.Cluster.SlotAcquireResult.Full.<Clone>$() -> Reeve.Cluster.SlotAcquireResult.Full!
+override Reeve.Cluster.SlotAcquireResult.Full.Equals(object? obj) -> bool
+override Reeve.Cluster.SlotAcquireResult.Full.GetHashCode() -> int
+override Reeve.Cluster.SlotAcquireResult.Full.ToString() -> string!
+override Reeve.Cluster.SlotAcquireResult.GetHashCode() -> int
+override Reeve.Cluster.SlotAcquireResult.NotServing.<Clone>$() -> Reeve.Cluster.SlotAcquireResult.NotServing!
+override Reeve.Cluster.SlotAcquireResult.NotServing.Equals(object? obj) -> bool
+override Reeve.Cluster.SlotAcquireResult.NotServing.GetHashCode() -> int
+override Reeve.Cluster.SlotAcquireResult.NotServing.ToString() -> string!
+override Reeve.Cluster.SlotAcquireResult.ToString() -> string!
+override Reeve.Cluster.SlotAcquireResult.Unknown.<Clone>$() -> Reeve.Cluster.SlotAcquireResult.Unknown!
+override Reeve.Cluster.SlotAcquireResult.Unknown.Equals(object? obj) -> bool
+override Reeve.Cluster.SlotAcquireResult.Unknown.GetHashCode() -> int
+override Reeve.Cluster.SlotAcquireResult.Unknown.ToString() -> string!
+override Reeve.Cluster.StatusSection.Equals(object? obj) -> bool
+override Reeve.Cluster.StatusSection.GetHashCode() -> int
+override Reeve.Cluster.StatusSection.ToString() -> string!
+override sealed Reeve.Cluster.AckOutcome.Acknowledged.Equals(Reeve.Cluster.AckOutcome? other) -> bool
+override sealed Reeve.Cluster.AckOutcome.NotAwaited.Equals(Reeve.Cluster.AckOutcome? other) -> bool
+override sealed Reeve.Cluster.AckOutcome.Unconfirmed.Equals(Reeve.Cluster.AckOutcome? other) -> bool
+override sealed Reeve.Cluster.BudgetResult.AlreadyCounted.Equals(Reeve.Cluster.BudgetResult? other) -> bool
+override sealed Reeve.Cluster.BudgetResult.Exhausted.Equals(Reeve.Cluster.BudgetResult? other) -> bool
+override sealed Reeve.Cluster.BudgetResult.Granted.Equals(Reeve.Cluster.BudgetResult? other) -> bool
+override sealed Reeve.Cluster.BudgetResult.NotServing.Equals(Reeve.Cluster.BudgetResult? other) -> bool
+override sealed Reeve.Cluster.BudgetResult.Unknown.Equals(Reeve.Cluster.BudgetResult? other) -> bool
+override sealed Reeve.Cluster.ClaimResult.Lost.Equals(Reeve.Cluster.ClaimResult? other) -> bool
+override sealed Reeve.Cluster.ClaimResult.NotServing.Equals(Reeve.Cluster.ClaimResult? other) -> bool
+override sealed Reeve.Cluster.ClaimResult.Unknown.Equals(Reeve.Cluster.ClaimResult? other) -> bool
+override sealed Reeve.Cluster.ClaimResult.Won.Equals(Reeve.Cluster.ClaimResult? other) -> bool
+override sealed Reeve.Cluster.CounterResult.Incremented.Equals(Reeve.Cluster.CounterResult? other) -> bool
+override sealed Reeve.Cluster.CounterResult.Unknown.Equals(Reeve.Cluster.CounterResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.AlreadyCompleted.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.Completed.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.CompletionUnknown.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.InDoubt.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.NotServing.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.Running.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.OnceResult.Unknown.Equals(Reeve.Cluster.OnceResult? other) -> bool
+override sealed Reeve.Cluster.SingleFlightResult.Computed.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+override sealed Reeve.Cluster.SingleFlightResult.ComputedRefused.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+override sealed Reeve.Cluster.SingleFlightResult.ComputedUnknown.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+override sealed Reeve.Cluster.SingleFlightResult.NotServing.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+override sealed Reeve.Cluster.SingleFlightResult.Unknown.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+override sealed Reeve.Cluster.SingleFlightResult.Waited.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+override sealed Reeve.Cluster.SkipOpenResult.Opened.Equals(Reeve.Cluster.SkipOpenResult? other) -> bool
+override sealed Reeve.Cluster.SkipOpenResult.Refused.Equals(Reeve.Cluster.SkipOpenResult? other) -> bool
+override sealed Reeve.Cluster.SlotAcquireResult.Acquired.Equals(Reeve.Cluster.SlotAcquireResult? other) -> bool
+override sealed Reeve.Cluster.SlotAcquireResult.Full.Equals(Reeve.Cluster.SlotAcquireResult? other) -> bool
+override sealed Reeve.Cluster.SlotAcquireResult.NotServing.Equals(Reeve.Cluster.SlotAcquireResult? other) -> bool
+override sealed Reeve.Cluster.SlotAcquireResult.Unknown.Equals(Reeve.Cluster.SlotAcquireResult? other) -> bool
+static Reeve.Cluster.AckOutcome.Acknowledged.None.get -> Reeve.Cluster.AckOutcome.Acknowledged!
+static Reeve.Cluster.AckOutcome.Acknowledged.operator !=(Reeve.Cluster.AckOutcome.Acknowledged? left, Reeve.Cluster.AckOutcome.Acknowledged? right) -> bool
+static Reeve.Cluster.AckOutcome.Acknowledged.operator ==(Reeve.Cluster.AckOutcome.Acknowledged? left, Reeve.Cluster.AckOutcome.Acknowledged? right) -> bool
+static Reeve.Cluster.AckOutcome.NotAwaited.operator !=(Reeve.Cluster.AckOutcome.NotAwaited? left, Reeve.Cluster.AckOutcome.NotAwaited? right) -> bool
+static Reeve.Cluster.AckOutcome.NotAwaited.operator ==(Reeve.Cluster.AckOutcome.NotAwaited? left, Reeve.Cluster.AckOutcome.NotAwaited? right) -> bool
+static Reeve.Cluster.AckOutcome.Unconfirmed.operator !=(Reeve.Cluster.AckOutcome.Unconfirmed? left, Reeve.Cluster.AckOutcome.Unconfirmed? right) -> bool
+static Reeve.Cluster.AckOutcome.Unconfirmed.operator ==(Reeve.Cluster.AckOutcome.Unconfirmed? left, Reeve.Cluster.AckOutcome.Unconfirmed? right) -> bool
+static Reeve.Cluster.AckOutcome.operator !=(Reeve.Cluster.AckOutcome? left, Reeve.Cluster.AckOutcome? right) -> bool
+static Reeve.Cluster.AckOutcome.operator ==(Reeve.Cluster.AckOutcome? left, Reeve.Cluster.AckOutcome? right) -> bool
+static Reeve.Cluster.AskRequest.operator !=(Reeve.Cluster.AskRequest? left, Reeve.Cluster.AskRequest? right) -> bool
+static Reeve.Cluster.AskRequest.operator ==(Reeve.Cluster.AskRequest? left, Reeve.Cluster.AskRequest? right) -> bool
+static Reeve.Cluster.AskResult.Answered(System.ReadOnlyMemory<byte> response) -> Reeve.Cluster.AskResult!
+static Reeve.Cluster.AskResult.AnsweredWithError(string! error) -> Reeve.Cluster.AskResult!
+static Reeve.Cluster.AskResult.NoOwner.get -> Reeve.Cluster.AskResult!
+static Reeve.Cluster.AskResult.NotTaken.get -> Reeve.Cluster.AskResult!
+static Reeve.Cluster.AskResult.OwnerLost.get -> Reeve.Cluster.AskResult!
+static Reeve.Cluster.AskResult.TakenUnanswered.get -> Reeve.Cluster.AskResult!
+static Reeve.Cluster.AskResult.operator !=(Reeve.Cluster.AskResult? left, Reeve.Cluster.AskResult? right) -> bool
+static Reeve.Cluster.AskResult.operator ==(Reeve.Cluster.AskResult? left, Reeve.Cluster.AskResult? right) -> bool
+static Reeve.Cluster.BudgetResult.AlreadyCounted.operator !=(Reeve.Cluster.BudgetResult.AlreadyCounted? left, Reeve.Cluster.BudgetResult.AlreadyCounted? right) -> bool
+static Reeve.Cluster.BudgetResult.AlreadyCounted.operator ==(Reeve.Cluster.BudgetResult.AlreadyCounted? left, Reeve.Cluster.BudgetResult.AlreadyCounted? right) -> bool
+static Reeve.Cluster.BudgetResult.Exhausted.operator !=(Reeve.Cluster.BudgetResult.Exhausted? left, Reeve.Cluster.BudgetResult.Exhausted? right) -> bool
+static Reeve.Cluster.BudgetResult.Exhausted.operator ==(Reeve.Cluster.BudgetResult.Exhausted? left, Reeve.Cluster.BudgetResult.Exhausted? right) -> bool
+static Reeve.Cluster.BudgetResult.Granted.operator !=(Reeve.Cluster.BudgetResult.Granted? left, Reeve.Cluster.BudgetResult.Granted? right) -> bool
+static Reeve.Cluster.BudgetResult.Granted.operator ==(Reeve.Cluster.BudgetResult.Granted? left, Reeve.Cluster.BudgetResult.Granted? right) -> bool
+static Reeve.Cluster.BudgetResult.NotServing.operator !=(Reeve.Cluster.BudgetResult.NotServing? left, Reeve.Cluster.BudgetResult.NotServing? right) -> bool
+static Reeve.Cluster.BudgetResult.NotServing.operator ==(Reeve.Cluster.BudgetResult.NotServing? left, Reeve.Cluster.BudgetResult.NotServing? right) -> bool
+static Reeve.Cluster.BudgetResult.Unknown.operator !=(Reeve.Cluster.BudgetResult.Unknown? left, Reeve.Cluster.BudgetResult.Unknown? right) -> bool
+static Reeve.Cluster.BudgetResult.Unknown.operator ==(Reeve.Cluster.BudgetResult.Unknown? left, Reeve.Cluster.BudgetResult.Unknown? right) -> bool
+static Reeve.Cluster.BudgetResult.operator !=(Reeve.Cluster.BudgetResult? left, Reeve.Cluster.BudgetResult? right) -> bool
+static Reeve.Cluster.BudgetResult.operator ==(Reeve.Cluster.BudgetResult? left, Reeve.Cluster.BudgetResult? right) -> bool
+static Reeve.Cluster.ChangeEntry.operator !=(Reeve.Cluster.ChangeEntry? left, Reeve.Cluster.ChangeEntry? right) -> bool
+static Reeve.Cluster.ChangeEntry.operator ==(Reeve.Cluster.ChangeEntry? left, Reeve.Cluster.ChangeEntry? right) -> bool
+static Reeve.Cluster.ClaimResult.Lost.operator !=(Reeve.Cluster.ClaimResult.Lost? left, Reeve.Cluster.ClaimResult.Lost? right) -> bool
+static Reeve.Cluster.ClaimResult.Lost.operator ==(Reeve.Cluster.ClaimResult.Lost? left, Reeve.Cluster.ClaimResult.Lost? right) -> bool
+static Reeve.Cluster.ClaimResult.NotServing.operator !=(Reeve.Cluster.ClaimResult.NotServing? left, Reeve.Cluster.ClaimResult.NotServing? right) -> bool
+static Reeve.Cluster.ClaimResult.NotServing.operator ==(Reeve.Cluster.ClaimResult.NotServing? left, Reeve.Cluster.ClaimResult.NotServing? right) -> bool
+static Reeve.Cluster.ClaimResult.Unknown.operator !=(Reeve.Cluster.ClaimResult.Unknown? left, Reeve.Cluster.ClaimResult.Unknown? right) -> bool
+static Reeve.Cluster.ClaimResult.Unknown.operator ==(Reeve.Cluster.ClaimResult.Unknown? left, Reeve.Cluster.ClaimResult.Unknown? right) -> bool
+static Reeve.Cluster.ClaimResult.Won.operator !=(Reeve.Cluster.ClaimResult.Won? left, Reeve.Cluster.ClaimResult.Won? right) -> bool
+static Reeve.Cluster.ClaimResult.Won.operator ==(Reeve.Cluster.ClaimResult.Won? left, Reeve.Cluster.ClaimResult.Won? right) -> bool
+static Reeve.Cluster.ClaimResult.operator !=(Reeve.Cluster.ClaimResult? left, Reeve.Cluster.ClaimResult? right) -> bool
+static Reeve.Cluster.ClaimResult.operator ==(Reeve.Cluster.ClaimResult? left, Reeve.Cluster.ClaimResult? right) -> bool
+static Reeve.Cluster.ClusterCapabilities.ForUnit(string! kind) -> string!
+static Reeve.Cluster.ClusterCapabilities.Validate(string! capability) -> void
+static Reeve.Cluster.ClusterFenceRecord.operator !=(Reeve.Cluster.ClusterFenceRecord? left, Reeve.Cluster.ClusterFenceRecord? right) -> bool
+static Reeve.Cluster.ClusterFenceRecord.operator ==(Reeve.Cluster.ClusterFenceRecord? left, Reeve.Cluster.ClusterFenceRecord? right) -> bool
+static Reeve.Cluster.ClusterMemberStatus.operator !=(Reeve.Cluster.ClusterMemberStatus? left, Reeve.Cluster.ClusterMemberStatus? right) -> bool
+static Reeve.Cluster.ClusterMemberStatus.operator ==(Reeve.Cluster.ClusterMemberStatus? left, Reeve.Cluster.ClusterMemberStatus? right) -> bool
+static Reeve.Cluster.ClusterOptions.AckTimeoutDefaultSlack.get -> System.TimeSpan
+static Reeve.Cluster.ClusterStatusRead.operator !=(Reeve.Cluster.ClusterStatusRead? left, Reeve.Cluster.ClusterStatusRead? right) -> bool
+static Reeve.Cluster.ClusterStatusRead.operator ==(Reeve.Cluster.ClusterStatusRead? left, Reeve.Cluster.ClusterStatusRead? right) -> bool
+static Reeve.Cluster.ClusterStatusSection.operator !=(Reeve.Cluster.ClusterStatusSection? left, Reeve.Cluster.ClusterStatusSection? right) -> bool
+static Reeve.Cluster.ClusterStatusSection.operator ==(Reeve.Cluster.ClusterStatusSection? left, Reeve.Cluster.ClusterStatusSection? right) -> bool
+static Reeve.Cluster.CounterResult.Incremented.operator !=(Reeve.Cluster.CounterResult.Incremented? left, Reeve.Cluster.CounterResult.Incremented? right) -> bool
+static Reeve.Cluster.CounterResult.Incremented.operator ==(Reeve.Cluster.CounterResult.Incremented? left, Reeve.Cluster.CounterResult.Incremented? right) -> bool
+static Reeve.Cluster.CounterResult.Unknown.operator !=(Reeve.Cluster.CounterResult.Unknown? left, Reeve.Cluster.CounterResult.Unknown? right) -> bool
+static Reeve.Cluster.CounterResult.Unknown.operator ==(Reeve.Cluster.CounterResult.Unknown? left, Reeve.Cluster.CounterResult.Unknown? right) -> bool
+static Reeve.Cluster.CounterResult.operator !=(Reeve.Cluster.CounterResult? left, Reeve.Cluster.CounterResult? right) -> bool
+static Reeve.Cluster.CounterResult.operator ==(Reeve.Cluster.CounterResult? left, Reeve.Cluster.CounterResult? right) -> bool
+static Reeve.Cluster.DurableCommand.operator !=(Reeve.Cluster.DurableCommand? left, Reeve.Cluster.DurableCommand? right) -> bool
+static Reeve.Cluster.DurableCommand.operator ==(Reeve.Cluster.DurableCommand? left, Reeve.Cluster.DurableCommand? right) -> bool
+static Reeve.Cluster.DurableCommandResult.operator !=(Reeve.Cluster.DurableCommandResult? left, Reeve.Cluster.DurableCommandResult? right) -> bool
+static Reeve.Cluster.DurableCommandResult.operator ==(Reeve.Cluster.DurableCommandResult? left, Reeve.Cluster.DurableCommandResult? right) -> bool
+static Reeve.Cluster.DurableSendResult.operator !=(Reeve.Cluster.DurableSendResult? left, Reeve.Cluster.DurableSendResult? right) -> bool
+static Reeve.Cluster.DurableSendResult.operator ==(Reeve.Cluster.DurableSendResult? left, Reeve.Cluster.DurableSendResult? right) -> bool
+static Reeve.Cluster.EligibilityFilter.Any.get -> Reeve.Cluster.EligibilityFilter!
+static Reeve.Cluster.EntityMapping.operator !=(Reeve.Cluster.EntityMapping? left, Reeve.Cluster.EntityMapping? right) -> bool
+static Reeve.Cluster.EntityMapping.operator ==(Reeve.Cluster.EntityMapping? left, Reeve.Cluster.EntityMapping? right) -> bool
+static Reeve.Cluster.GenerationExtensions.Get<T>(this Reeve.Cluster.IGeneration! generation, string! aggregateType) -> T!
+static Reeve.Cluster.OnceResult.AlreadyCompleted.operator !=(Reeve.Cluster.OnceResult.AlreadyCompleted? left, Reeve.Cluster.OnceResult.AlreadyCompleted? right) -> bool
+static Reeve.Cluster.OnceResult.AlreadyCompleted.operator ==(Reeve.Cluster.OnceResult.AlreadyCompleted? left, Reeve.Cluster.OnceResult.AlreadyCompleted? right) -> bool
+static Reeve.Cluster.OnceResult.Completed.operator !=(Reeve.Cluster.OnceResult.Completed? left, Reeve.Cluster.OnceResult.Completed? right) -> bool
+static Reeve.Cluster.OnceResult.Completed.operator ==(Reeve.Cluster.OnceResult.Completed? left, Reeve.Cluster.OnceResult.Completed? right) -> bool
+static Reeve.Cluster.OnceResult.CompletionUnknown.operator !=(Reeve.Cluster.OnceResult.CompletionUnknown? left, Reeve.Cluster.OnceResult.CompletionUnknown? right) -> bool
+static Reeve.Cluster.OnceResult.CompletionUnknown.operator ==(Reeve.Cluster.OnceResult.CompletionUnknown? left, Reeve.Cluster.OnceResult.CompletionUnknown? right) -> bool
+static Reeve.Cluster.OnceResult.InDoubt.operator !=(Reeve.Cluster.OnceResult.InDoubt? left, Reeve.Cluster.OnceResult.InDoubt? right) -> bool
+static Reeve.Cluster.OnceResult.InDoubt.operator ==(Reeve.Cluster.OnceResult.InDoubt? left, Reeve.Cluster.OnceResult.InDoubt? right) -> bool
+static Reeve.Cluster.OnceResult.NotServing.operator !=(Reeve.Cluster.OnceResult.NotServing? left, Reeve.Cluster.OnceResult.NotServing? right) -> bool
+static Reeve.Cluster.OnceResult.NotServing.operator ==(Reeve.Cluster.OnceResult.NotServing? left, Reeve.Cluster.OnceResult.NotServing? right) -> bool
+static Reeve.Cluster.OnceResult.Running.operator !=(Reeve.Cluster.OnceResult.Running? left, Reeve.Cluster.OnceResult.Running? right) -> bool
+static Reeve.Cluster.OnceResult.Running.operator ==(Reeve.Cluster.OnceResult.Running? left, Reeve.Cluster.OnceResult.Running? right) -> bool
+static Reeve.Cluster.OnceResult.Unknown.operator !=(Reeve.Cluster.OnceResult.Unknown? left, Reeve.Cluster.OnceResult.Unknown? right) -> bool
+static Reeve.Cluster.OnceResult.Unknown.operator ==(Reeve.Cluster.OnceResult.Unknown? left, Reeve.Cluster.OnceResult.Unknown? right) -> bool
+static Reeve.Cluster.OnceResult.operator !=(Reeve.Cluster.OnceResult? left, Reeve.Cluster.OnceResult? right) -> bool
+static Reeve.Cluster.OnceResult.operator ==(Reeve.Cluster.OnceResult? left, Reeve.Cluster.OnceResult? right) -> bool
+static Reeve.Cluster.ReconcileResult.operator !=(Reeve.Cluster.ReconcileResult? left, Reeve.Cluster.ReconcileResult? right) -> bool
+static Reeve.Cluster.ReconcileResult.operator ==(Reeve.Cluster.ReconcileResult? left, Reeve.Cluster.ReconcileResult? right) -> bool
+static Reeve.Cluster.SingleFlightResult.Computed.operator !=(Reeve.Cluster.SingleFlightResult.Computed? left, Reeve.Cluster.SingleFlightResult.Computed? right) -> bool
+static Reeve.Cluster.SingleFlightResult.Computed.operator ==(Reeve.Cluster.SingleFlightResult.Computed? left, Reeve.Cluster.SingleFlightResult.Computed? right) -> bool
+static Reeve.Cluster.SingleFlightResult.ComputedRefused.operator !=(Reeve.Cluster.SingleFlightResult.ComputedRefused? left, Reeve.Cluster.SingleFlightResult.ComputedRefused? right) -> bool
+static Reeve.Cluster.SingleFlightResult.ComputedRefused.operator ==(Reeve.Cluster.SingleFlightResult.ComputedRefused? left, Reeve.Cluster.SingleFlightResult.ComputedRefused? right) -> bool
+static Reeve.Cluster.SingleFlightResult.ComputedUnknown.operator !=(Reeve.Cluster.SingleFlightResult.ComputedUnknown? left, Reeve.Cluster.SingleFlightResult.ComputedUnknown? right) -> bool
+static Reeve.Cluster.SingleFlightResult.ComputedUnknown.operator ==(Reeve.Cluster.SingleFlightResult.ComputedUnknown? left, Reeve.Cluster.SingleFlightResult.ComputedUnknown? right) -> bool
+static Reeve.Cluster.SingleFlightResult.NotServing.operator !=(Reeve.Cluster.SingleFlightResult.NotServing? left, Reeve.Cluster.SingleFlightResult.NotServing? right) -> bool
+static Reeve.Cluster.SingleFlightResult.NotServing.operator ==(Reeve.Cluster.SingleFlightResult.NotServing? left, Reeve.Cluster.SingleFlightResult.NotServing? right) -> bool
+static Reeve.Cluster.SingleFlightResult.Unknown.operator !=(Reeve.Cluster.SingleFlightResult.Unknown? left, Reeve.Cluster.SingleFlightResult.Unknown? right) -> bool
+static Reeve.Cluster.SingleFlightResult.Unknown.operator ==(Reeve.Cluster.SingleFlightResult.Unknown? left, Reeve.Cluster.SingleFlightResult.Unknown? right) -> bool
+static Reeve.Cluster.SingleFlightResult.Waited.operator !=(Reeve.Cluster.SingleFlightResult.Waited? left, Reeve.Cluster.SingleFlightResult.Waited? right) -> bool
+static Reeve.Cluster.SingleFlightResult.Waited.operator ==(Reeve.Cluster.SingleFlightResult.Waited? left, Reeve.Cluster.SingleFlightResult.Waited? right) -> bool
+static Reeve.Cluster.SingleFlightResult.operator !=(Reeve.Cluster.SingleFlightResult? left, Reeve.Cluster.SingleFlightResult? right) -> bool
+static Reeve.Cluster.SingleFlightResult.operator ==(Reeve.Cluster.SingleFlightResult? left, Reeve.Cluster.SingleFlightResult? right) -> bool
+static Reeve.Cluster.SkipOpenResult.Opened.operator !=(Reeve.Cluster.SkipOpenResult.Opened? left, Reeve.Cluster.SkipOpenResult.Opened? right) -> bool
+static Reeve.Cluster.SkipOpenResult.Opened.operator ==(Reeve.Cluster.SkipOpenResult.Opened? left, Reeve.Cluster.SkipOpenResult.Opened? right) -> bool
+static Reeve.Cluster.SkipOpenResult.Refused.operator !=(Reeve.Cluster.SkipOpenResult.Refused? left, Reeve.Cluster.SkipOpenResult.Refused? right) -> bool
+static Reeve.Cluster.SkipOpenResult.Refused.operator ==(Reeve.Cluster.SkipOpenResult.Refused? left, Reeve.Cluster.SkipOpenResult.Refused? right) -> bool
+static Reeve.Cluster.SkipOpenResult.operator !=(Reeve.Cluster.SkipOpenResult? left, Reeve.Cluster.SkipOpenResult? right) -> bool
+static Reeve.Cluster.SkipOpenResult.operator ==(Reeve.Cluster.SkipOpenResult? left, Reeve.Cluster.SkipOpenResult? right) -> bool
+static Reeve.Cluster.SkipRequest.operator !=(Reeve.Cluster.SkipRequest? left, Reeve.Cluster.SkipRequest? right) -> bool
+static Reeve.Cluster.SkipRequest.operator ==(Reeve.Cluster.SkipRequest? left, Reeve.Cluster.SkipRequest? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.Acquired.operator !=(Reeve.Cluster.SlotAcquireResult.Acquired? left, Reeve.Cluster.SlotAcquireResult.Acquired? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.Acquired.operator ==(Reeve.Cluster.SlotAcquireResult.Acquired? left, Reeve.Cluster.SlotAcquireResult.Acquired? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.Full.operator !=(Reeve.Cluster.SlotAcquireResult.Full? left, Reeve.Cluster.SlotAcquireResult.Full? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.Full.operator ==(Reeve.Cluster.SlotAcquireResult.Full? left, Reeve.Cluster.SlotAcquireResult.Full? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.NotServing.operator !=(Reeve.Cluster.SlotAcquireResult.NotServing? left, Reeve.Cluster.SlotAcquireResult.NotServing? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.NotServing.operator ==(Reeve.Cluster.SlotAcquireResult.NotServing? left, Reeve.Cluster.SlotAcquireResult.NotServing? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.Unknown.operator !=(Reeve.Cluster.SlotAcquireResult.Unknown? left, Reeve.Cluster.SlotAcquireResult.Unknown? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.Unknown.operator ==(Reeve.Cluster.SlotAcquireResult.Unknown? left, Reeve.Cluster.SlotAcquireResult.Unknown? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.operator !=(Reeve.Cluster.SlotAcquireResult? left, Reeve.Cluster.SlotAcquireResult? right) -> bool
+static Reeve.Cluster.SlotAcquireResult.operator ==(Reeve.Cluster.SlotAcquireResult? left, Reeve.Cluster.SlotAcquireResult? right) -> bool
+static Reeve.Cluster.StatusSection.operator !=(Reeve.Cluster.StatusSection? left, Reeve.Cluster.StatusSection? right) -> bool
+static Reeve.Cluster.StatusSection.operator ==(Reeve.Cluster.StatusSection? left, Reeve.Cluster.StatusSection? right) -> bool
+virtual Reeve.Cluster.AckOutcome.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.AckOutcome.Equals(Reeve.Cluster.AckOutcome? other) -> bool
+virtual Reeve.Cluster.AckOutcome.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.BudgetResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.BudgetResult.Equals(Reeve.Cluster.BudgetResult? other) -> bool
+virtual Reeve.Cluster.BudgetResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.ClaimResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.ClaimResult.Equals(Reeve.Cluster.ClaimResult? other) -> bool
+virtual Reeve.Cluster.ClaimResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.CounterResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.CounterResult.Equals(Reeve.Cluster.CounterResult? other) -> bool
+virtual Reeve.Cluster.CounterResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.OnceResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.OnceResult.Equals(Reeve.Cluster.OnceResult? other) -> bool
+virtual Reeve.Cluster.OnceResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.SingleFlightResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.SingleFlightResult.Equals(Reeve.Cluster.SingleFlightResult? other) -> bool
+virtual Reeve.Cluster.SingleFlightResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.SkipOpenResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.SkipOpenResult.Equals(Reeve.Cluster.SkipOpenResult? other) -> bool
+virtual Reeve.Cluster.SkipOpenResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+virtual Reeve.Cluster.SlotAcquireResult.EqualityContract.get -> System.Type!
+virtual Reeve.Cluster.SlotAcquireResult.Equals(Reeve.Cluster.SlotAcquireResult? other) -> bool
+virtual Reeve.Cluster.SlotAcquireResult.PrintMembers(System.Text.StringBuilder! builder) -> bool
+Reeve.Cluster.ClusterConfigurationReason.StatementTimeoutNotZero = 11 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.AggregateTypeWithoutReconciler = 12 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.VersionNotSemVer = 13 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.HubFilterWithoutFenceSink = 14 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.CreateOutcome.NotEligible = 4 -> Reeve.Cluster.CreateOutcome
+Reeve.Cluster.ClusterConfigurationReason.WriteOutsideClusterScope = 15 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationReason.ContextWithoutCapture = 16 -> Reeve.Cluster.ClusterConfigurationReason
+Reeve.Cluster.ClusterConfigurationException.ClusterConfigurationException(Reeve.Cluster.ClusterConfigurationReason reason, string! message, System.Exception! innerException) -> void
+Reeve.Cluster.IClusterSlots.ReadHoldersAsync(string! key, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Reeve.Cluster.SlotHolder!>!>!
+Reeve.Cluster.SlotHolder
+Reeve.Cluster.SlotHolder.<Clone>$() -> Reeve.Cluster.SlotHolder!
+Reeve.Cluster.SlotHolder.Epoch.get -> long
+Reeve.Cluster.SlotHolder.Epoch.init -> void
+Reeve.Cluster.SlotHolder.Equals(Reeve.Cluster.SlotHolder? other) -> bool
+Reeve.Cluster.SlotHolder.Id.get -> string!
+Reeve.Cluster.SlotHolder.Id.init -> void
+Reeve.Cluster.SlotHolder.ReplicaId.get -> string!
+Reeve.Cluster.SlotHolder.ReplicaId.init -> void
+Reeve.Cluster.SlotHolder.SlotHolder() -> void
+override Reeve.Cluster.SlotHolder.Equals(object? obj) -> bool
+override Reeve.Cluster.SlotHolder.GetHashCode() -> int
+override Reeve.Cluster.SlotHolder.ToString() -> string!
+static Reeve.Cluster.SlotHolder.operator !=(Reeve.Cluster.SlotHolder? left, Reeve.Cluster.SlotHolder? right) -> bool
+static Reeve.Cluster.SlotHolder.operator ==(Reeve.Cluster.SlotHolder? left, Reeve.Cluster.SlotHolder? right) -> bool

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <IsAotCompatible>true</IsAotCompatible>
+    <PackageId>Reeve.Cluster.Redis</PackageId>
+    <Description>Redis wake-ups, the relay transport, Redis primitives and FenceRedis for Reeve.Cluster. Redis is never the authority: losing a message costs latency, never correctness.</Description>
+    <PackageTags>cluster;replicas;redis</PackageTags>
+    <RedisMinServerVersion>6.2</RedisMinServerVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Reeve.Cluster/Reeve.Cluster.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Reeve.Cluster.Tests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.IntegrationTests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.Harness" />
+  </ItemGroup>
+
+</Project>

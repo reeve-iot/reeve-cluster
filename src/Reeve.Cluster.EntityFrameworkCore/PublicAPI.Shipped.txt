@@ -1,0 +1,16 @@
+#nullable enable
+Microsoft.Extensions.DependencyInjection.ReeveClusterEntityFrameworkCoreOptionsExtensions
+Microsoft.Extensions.DependencyInjection.ReeveClusterEntityFrameworkCoreServiceCollectionExtensions
+Reeve.Cluster.FencedDbContextExtensions
+Reeve.Cluster.FencedDbContextTransaction
+Reeve.Cluster.FencedDbContextTransaction.CommitAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.FencedDbContextTransaction.Dispose() -> void
+Reeve.Cluster.FencedDbContextTransaction.DisposeAsync() -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.FencedDbContextTransaction.RollbackAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.FencedDbContextTransaction.Transaction.get -> Microsoft.EntityFrameworkCore.Storage.IDbContextTransaction!
+static Microsoft.Extensions.DependencyInjection.ReeveClusterEntityFrameworkCoreOptionsExtensions.UseReeveClusterCapture(this Microsoft.EntityFrameworkCore.DbContextOptionsBuilder! options, System.IServiceProvider! services) -> Microsoft.EntityFrameworkCore.DbContextOptionsBuilder!
+static Microsoft.Extensions.DependencyInjection.ReeveClusterEntityFrameworkCoreServiceCollectionExtensions.AddReeveClusterEntityFrameworkCore(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Action<Reeve.Cluster.IClusterMappingBuilder!>! mapping) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Reeve.Cluster.FencedDbContextExtensions.BeginFencedTransactionAsync(this Reeve.Cluster.OwnedContext! context, Microsoft.EntityFrameworkCore.DbContext! db, System.Data.IsolationLevel isolationLevel = System.Data.IsolationLevel.Unspecified, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.FencedDbContextTransaction!>!
+Microsoft.EntityFrameworkCore.ReeveClusterQueryableExtensions
+static Microsoft.EntityFrameworkCore.ReeveClusterQueryableExtensions.AppendedToChangeLog<T>(this System.Linq.IQueryable<T>! source) -> System.Linq.IQueryable<T>!
+const Microsoft.EntityFrameworkCore.ReeveClusterQueryableExtensions.AppendedToChangeLogTag = "reeve-cluster: appended to change log" -> string!

@@ -1,0 +1,75 @@
+#nullable enable
+Microsoft.Extensions.DependencyInjection.ClusterAskServiceCollectionExtensions
+Microsoft.Extensions.DependencyInjection.ClusterCommandServiceCollectionExtensions
+Microsoft.Extensions.DependencyInjection.ClusterMigrationsServiceCollectionExtensions
+Microsoft.Extensions.DependencyInjection.ClusterServiceCollectionExtensions
+Microsoft.Extensions.DependencyInjection.ClusterStatusServiceCollectionExtensions
+Microsoft.Extensions.DependencyInjection.OnceServiceCollectionExtensions
+Reeve.Cluster.ClaimFencedTransaction
+Reeve.Cluster.ClaimFencedTransaction.CommitAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.ClaimFencedTransaction.Connection.get -> Npgsql.NpgsqlConnection!
+Reeve.Cluster.ClaimFencedTransaction.Dispose() -> void
+Reeve.Cluster.ClaimFencedTransaction.DisposeAsync() -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.ClaimFencedTransaction.RollbackAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.ClaimFencedTransaction.Transaction.get -> Npgsql.NpgsqlTransaction!
+Reeve.Cluster.ClaimFencedTransactionExtensions
+Reeve.Cluster.ClusterDiagnostics
+Reeve.Cluster.ClusterMigrationOptions
+Reeve.Cluster.ClusterMigrationOptions.ClusterMigrationOptions() -> void
+Reeve.Cluster.ClusterMigrationOptions.ConnectionString.get -> string?
+Reeve.Cluster.ClusterMigrationOptions.ConnectionString.set -> void
+Reeve.Cluster.ClusterMigrationResult
+Reeve.Cluster.ClusterMigrationResult.<Clone>$() -> Reeve.Cluster.ClusterMigrationResult!
+Reeve.Cluster.ClusterMigrationResult.AppliedMigrations.get -> System.Collections.Generic.IReadOnlyList<string!>!
+Reeve.Cluster.ClusterMigrationResult.AppliedMigrations.init -> void
+Reeve.Cluster.ClusterMigrationResult.ClusterMigrationResult(System.Collections.Generic.IReadOnlyList<string!>! AppliedMigrations, string? LastMigration) -> void
+Reeve.Cluster.ClusterMigrationResult.Deconstruct(out System.Collections.Generic.IReadOnlyList<string!>! AppliedMigrations, out string? LastMigration) -> void
+Reeve.Cluster.ClusterMigrationResult.Equals(Reeve.Cluster.ClusterMigrationResult? other) -> bool
+Reeve.Cluster.ClusterMigrationResult.LastMigration.get -> string?
+Reeve.Cluster.ClusterMigrationResult.LastMigration.init -> void
+Reeve.Cluster.ClusterPorts
+Reeve.Cluster.ClusterPorts.ClusterPorts(System.Collections.Generic.IReadOnlyList<System.Type!>! reconcilers, System.Type! fenceSink) -> void
+Reeve.Cluster.FencedTransaction
+Reeve.Cluster.FencedTransaction.CommitAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.FencedTransaction.Connection.get -> Npgsql.NpgsqlConnection!
+Reeve.Cluster.FencedTransaction.Dispose() -> void
+Reeve.Cluster.FencedTransaction.DisposeAsync() -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.FencedTransaction.RollbackAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.FencedTransaction.Transaction.get -> Npgsql.NpgsqlTransaction!
+Reeve.Cluster.FencedTransactionExtensions
+Reeve.Cluster.IClusterMigrationRunner
+Reeve.Cluster.IClusterMigrationRunner.MigrateAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ClusterMigrationResult!>!
+Reeve.Cluster.SlotFencedTransaction
+Reeve.Cluster.SlotFencedTransaction.CommitAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.SlotFencedTransaction.Connection.get -> Npgsql.NpgsqlConnection!
+Reeve.Cluster.SlotFencedTransaction.Dispose() -> void
+Reeve.Cluster.SlotFencedTransaction.DisposeAsync() -> System.Threading.Tasks.ValueTask
+Reeve.Cluster.SlotFencedTransaction.RollbackAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+Reeve.Cluster.SlotFencedTransaction.Transaction.get -> Npgsql.NpgsqlTransaction!
+Reeve.Cluster.SlotFencedTransactionExtensions
+const Reeve.Cluster.ClusterDiagnostics.Name = "Reeve.Cluster" -> string!
+override Reeve.Cluster.ClusterMigrationResult.Equals(object? obj) -> bool
+override Reeve.Cluster.ClusterMigrationResult.GetHashCode() -> int
+override Reeve.Cluster.ClusterMigrationResult.ToString() -> string!
+static Microsoft.Extensions.DependencyInjection.ClusterAskServiceCollectionExtensions.AddClusterAskHandler<THandler>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, string! kind) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterAskServiceCollectionExtensions.AddClusterMemberAskHandler<THandler>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterCommandServiceCollectionExtensions.AddClusterCommandHandler<THandler>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, string! kind, Reeve.Cluster.InDoubtPolicy inDoubt) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterMigrationsServiceCollectionExtensions.AddReeveClusterMigrations(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Action<Reeve.Cluster.ClusterMigrationOptions!>! configure) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterServiceCollectionExtensions.AddClusterKeyedResource<TUnit>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, string! kind, System.Action<Reeve.Cluster.UnitKindOptions!>! configure) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterServiceCollectionExtensions.AddClusterUnit<TUnit>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, string! kind, System.Action<Reeve.Cluster.UnitKindOptions!>? configure = null) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterServiceCollectionExtensions.AddReeveCluster(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Reeve.Cluster.ClusterPorts! ports, System.Action<Reeve.Cluster.ClusterOptions!>! configure) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.ClusterStatusServiceCollectionExtensions.AddClusterStatusSection<T>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.OnceServiceCollectionExtensions.AddClusterOnceEffect(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, string! name, System.Func<System.IServiceProvider!, string!, System.Threading.CancellationToken, System.Threading.Tasks.Task!>! effect) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Reeve.Cluster.ClaimFencedTransactionExtensions.BeginClaimFencedTransactionAsync(this Reeve.Cluster.IClusterClaims! claims, string! key, System.Guid token, Npgsql.NpgsqlConnection! connection, System.Data.IsolationLevel isolationLevel = System.Data.IsolationLevel.Unspecified, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.ClaimFencedTransaction!>!
+static Reeve.Cluster.ClusterMigrationResult.operator !=(Reeve.Cluster.ClusterMigrationResult? left, Reeve.Cluster.ClusterMigrationResult? right) -> bool
+static Reeve.Cluster.ClusterMigrationResult.operator ==(Reeve.Cluster.ClusterMigrationResult? left, Reeve.Cluster.ClusterMigrationResult? right) -> bool
+static Reeve.Cluster.FencedTransactionExtensions.BeginFencedTransactionAsync(this Reeve.Cluster.OwnedContext! context, Npgsql.NpgsqlConnection! connection, System.Data.IsolationLevel isolationLevel = System.Data.IsolationLevel.Unspecified, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.FencedTransaction!>!
+static Reeve.Cluster.SlotFencedTransactionExtensions.BeginSlotFencedTransactionAsync(this Reeve.Cluster.IClusterSlots! slots, string! key, string! id, System.Guid token, Npgsql.NpgsqlConnection! connection, System.Data.IsolationLevel isolationLevel = System.Data.IsolationLevel.Unspecified, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Reeve.Cluster.SlotFencedTransaction!>!
+Reeve.Cluster.ClusterAreas
+Reeve.Cluster.ClusterAreas.All = Reeve.Cluster.ClusterAreas.OwnedWork | Reeve.Cluster.ClusterAreas.Primitives | Reeve.Cluster.ClusterAreas.Ask | Reeve.Cluster.ClusterAreas.Commands -> Reeve.Cluster.ClusterAreas
+Reeve.Cluster.ClusterAreas.Ask = 4 -> Reeve.Cluster.ClusterAreas
+Reeve.Cluster.ClusterAreas.Commands = 8 -> Reeve.Cluster.ClusterAreas
+Reeve.Cluster.ClusterAreas.None = 0 -> Reeve.Cluster.ClusterAreas
+Reeve.Cluster.ClusterAreas.OwnedWork = 1 -> Reeve.Cluster.ClusterAreas
+Reeve.Cluster.ClusterAreas.Primitives = 2 -> Reeve.Cluster.ClusterAreas
+static Microsoft.Extensions.DependencyInjection.ClusterServiceCollectionExtensions.AddReeveCluster(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Reeve.Cluster.ClusterPorts! ports, Reeve.Cluster.ClusterAreas areas, System.Action<Reeve.Cluster.ClusterOptions!>! configure) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!

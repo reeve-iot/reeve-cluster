@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Reeve.Cluster.Abstractions/Reeve.Cluster.Abstractions.csproj" />
+    <Project Path="src/Reeve.Cluster/Reeve.Cluster.csproj" />
+    <Project Path="src/Reeve.Cluster.Redis/Reeve.Cluster.Redis.csproj" />
+    <Project Path="src/Reeve.Cluster.EntityFrameworkCore/Reeve.Cluster.EntityFrameworkCore.csproj" />
+    <Project Path="src/Reeve.Cluster.AspNetCore/Reeve.Cluster.AspNetCore.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/Reeve.Cluster.Sample/Reeve.Cluster.Sample.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Reeve.Cluster.Tests/Reeve.Cluster.Tests.csproj" />
+    <Project Path="tests/Reeve.Cluster.ArchitectureTests/Reeve.Cluster.ArchitectureTests.csproj" />
+    <Project Path="tests/Reeve.Cluster.IntegrationTests/Reeve.Cluster.IntegrationTests.csproj" />
+    <Project Path="tests/Reeve.Cluster.Harness/Reeve.Cluster.Harness.csproj" />
+    <Project Path="tests/Reeve.Cluster.Harness.Tests/Reeve.Cluster.Harness.Tests.csproj" />
+  </Folder>
+</Solution>

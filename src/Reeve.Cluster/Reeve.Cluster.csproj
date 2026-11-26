@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <IsAotCompatible>true</IsAotCompatible>
+    <PackageId>Reeve.Cluster</PackageId>
+    <Description>Single-replica semantics for a service that runs as 1..N replicas over one PostgreSQL: leased membership with self-fencing, a configuration log acknowledged by every leased replica, the read index, owned units, ask and claims.</Description>
+    <PackageTags>cluster;replicas;postgresql;lease;fencing;single-replica</PackageTags>
+    <!-- Microsoft.EntityFrameworkCore.Design turns on a runtimeconfig.json for dotnet-ef; the package does not ship it. -->
+    <GenerateRuntimeConfigurationFiles Condition="'$(_IsPacking)' == 'true'">false</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Reeve.Cluster.Abstractions/Reeve.Cluster.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Reeve.Cluster.Tests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.ArchitectureTests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.IntegrationTests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.Harness" />
+    <InternalsVisibleTo Include="Reeve.Cluster.Harness.Tests" />
+    <InternalsVisibleTo Include="Reeve.Cluster.AspNetCore" />
+    <InternalsVisibleTo Include="Reeve.Cluster.EntityFrameworkCore" />
+    <InternalsVisibleTo Include="Reeve.Cluster.Redis" />
+  </ItemGroup>
+
+</Project>

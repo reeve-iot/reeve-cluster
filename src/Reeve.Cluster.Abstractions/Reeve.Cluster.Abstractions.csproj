@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <IsAotCompatible>true</IsAotCompatible>
+    <PackageId>Reeve.Cluster.Abstractions</PackageId>
+    <Description>Interfaces and result types of Reeve.Cluster, the library that gives a service running as 1..N replicas over one PostgreSQL single-replica semantics. Depends on nothing.</Description>
+    <PackageTags>cluster;replicas;postgresql;single-replica</PackageTags>
+  </PropertyGroup>
+
+</Project>

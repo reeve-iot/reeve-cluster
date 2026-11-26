@@ -1,0 +1,27 @@
+<Project>
+
+  <Target Name="ReeveExactProjectReferenceVersions" AfterTargets="_GetProjectReferenceVersions"
+          Condition="'$(ReeveShippedPackage)' == 'true'">
+    <ItemGroup>
+      <_ProjectReferencesWithVersions Condition="!$([System.String]::Copy('%(ProjectVersion)').StartsWith('['))">
+        <ProjectVersion>[%(ProjectVersion)]</ProjectVersion>
+      </_ProjectReferencesWithVersions>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="ReeveCheckExactSiblingPins" AfterTargets="GenerateNuspec" Condition="'$(ReeveShippedPackage)' == 'true'">
+    <PropertyGroup>
+      <_ReeveLoosePin>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(NuspecOutputAbsolutePath)$(PackageId).$(PackageVersion).nuspec')), '&lt;dependency id="Reeve\.Cluster[^"]*" version="[^\[][^"]*"').Value)</_ReeveLoosePin>
+    </PropertyGroup>
+    <Error Condition="'$(_ReeveLoosePin)' != ''" Text="$(MSBuildProjectName): sibling dependency is not an exact [X] range ($(_ReeveLoosePin)); the _GetProjectReferenceVersions hook in Directory.Build.targets no longer applies." />
+  </Target>
+
+  <ItemGroup Condition="'$(ReeveShippedPackage)' == 'true'">
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(IsAotCompatible)' == 'true'">
+    <WarningsAsErrors>$(WarningsAsErrors);IL2026;IL2046;IL2067;IL2070;IL2072;IL2075;IL2080;IL2087;IL2090;IL2091;IL3050;IL3051;SYSLIB1030;SYSLIB1031;SYSLIB1032;SYSLIB1033;SYSLIB1034;SYSLIB1035;SYSLIB1036;SYSLIB1038;SYSLIB1039</WarningsAsErrors>
+  </PropertyGroup>
+
+</Project>

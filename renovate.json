@@ -1,0 +1,95 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":separateMultipleMajorReleases"
+  ],
+  "timezone": "Europe/Warsaw",
+  "dependencyDashboard": false,
+  "enabledManagers": [
+    "nuget",
+    "github-actions",
+    "gomod"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/vendor/**",
+    "**/.git/**",
+    "docs/**"
+  ],
+  "packageRules": [
+    {
+      "description": "One pull request per run for the .NET stack instead of one per package.",
+      "matchManagers": [
+        "nuget"
+      ],
+      "groupName": ".NET dependencies"
+    },
+    {
+      "description": "GitHub Actions versions land in one pull request.",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Reeve SDK/contract pins move as a deliberate sweep coupled to the host line, not on a bot's clock.",
+      "matchPackageNames": [
+        "/^Reeve\\./"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "Renovate never proposes a major of the .NET release train. The packages ship net11.0 assets built against the 11.x EF Core and Npgsql pins, the majors that ship with .NET 11. Moving the pins in Directory.Packages.props to the next major is a hand-made change; minors and patches of the current major flow as before.",
+      "matchPackageNames": [
+        "Microsoft.Extensions.*",
+        "Microsoft.AspNetCore.*",
+        "Microsoft.NET.*",
+        "!Microsoft.NET.Test.Sdk",
+        "System.*",
+        "Npgsql",
+        "Npgsql.*"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "EF Core stays below 12. The packages build against EF Core 11, the floor Directory.Packages.props holds; the change that moves them to EF Core 12 lifts this cap by hand.",
+      "matchDatasources": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "Microsoft.EntityFrameworkCore*",
+        "Npgsql.EntityFrameworkCore.PostgreSQL",
+        "dotnet-ef"
+      ],
+      "allowedVersions": "<12"
+    },
+    {
+      "description": "Microsoft.EntityFrameworkCore.Design stays at the EF Core floor Npgsql.EntityFrameworkCore.PostgreSQL brings, the version Reeve.Cluster compiles against: above it MSB3277 returns in Redis and AspNetCore. Renovate never raises it, alone or in the .NET group: it moves by hand when an Npgsql.EntityFrameworkCore.PostgreSQL update raises that floor.",
+      "matchDatasources": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "Microsoft.EntityFrameworkCore.Design"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "The .NET SDK major in the workflows moves by hand together with the target framework.",
+      "matchDatasources": [
+        "dotnet-version"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "enabled": false
+    }
+  ],
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2
+}
